@@ -1,0 +1,165 @@
+@media (max-width: 1023px) and (min-width: 768px) {
+    // aire acondicionado
+    .main-aire-acondicionado {
+        padding: 1rem;
+        .navbar {
+            .navbar-nav {
+                flex-direction: column;
+                .nav-item {
+                    margin-bottom: 1rem;
+                }
+            }
+            .form-control {
+                margin-bottom: 1rem;
+            }
+        }
+        .grid-container, .grid-container1, .grid-container2 {
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            .grid-item, .grid-item2 {
+                padding: 0.5rem;
+            }
+        }
+        .container2 {
+            .flex-container2 {
+                flex-direction: column;
+                align-items: center;
+                max-width: fit-content;
+                .paragraph-bubble {
+                    margin-bottom: 1rem;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+@media (max-width: 767px) {
+    // Index
+    .container1 {
+        flex-direction: column;
+        background-color: black;
+        .card1 {
+            width: 100%;
+            height: auto;
+            &.card-left, &.card-right {
+                clip-path: none;
+            }
+        }
+    }
+    
+    .videos-container {
+        flex-direction: column;
+        .video-item {
+            width: 100%;
+            margin: 0.5rem 0;
+            video {
+                width: 100%;
+            }
+        }
+    }
+    
+    .servicios {
+        padding: 1rem;
+        h2 {
+            font-size: 1.2rem;
+            padding: 0.5rem;
+        }
+        p {
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+    }
+    .imagen3 {
+        display: none; 
+    }
+    // Aire acondicionado
+    .flex-container2 {
+        @include flex(column, center, center);
+    }
+
+    // Aire acondicionado
+    .main-aire-acondicionado {
+        padding: 0.5rem;
+        .navbar {
+            .navbar-nav {
+                flex-direction: column;
+                .nav-item {
+                    margin-bottom: 0.5rem;
+                }
+            }
+            .form-control {
+                margin-bottom: 0.5rem;
+            }
+        }
+        .grid-container2 {
+            grid-template-columns: 1fr;
+            justify-content: center;
+            background-color: black;
+            .grid-item, .grid-item2 {
+                padding: 0.5rem;
+            }
+        }
+        .container2 {
+            .flex-container2 {
+                flex-direction: column;
+                .paragraph-bubble {
+                    margin-bottom: 0.5rem;
+                    margin-right: 0;
+                    .imagen {
+                        max-width: 320px;
+                    }
+                }
+                
+            }
+        }
+        .grid-container1 {
+            @include flex(column, center, center);
+            .grid-item {
+                flex-direction: column;
+            }
+        }
+    }
+    // Nosotros
+    .container1 {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .container3 {
+        grid-template-columns: 1fr;
+    }
+    
+    .vision-container {
+        flex-direction: column;
+        
+        .texto, .imagen {
+            margin: 0;
+            flex: none;
+            width: 100%;
+        }
+    }
+    // Contacto
+    .contacto {
+        flex-direction: column;
+        form {
+            padding-right: 0;
+            padding-bottom: 2rem;
+        }
+        .mapa {
+            padding-left: 0;
+        }
+    }
+    
+    // Footer
+    footer .footer-container {
+        flex-direction: column;
+        align-items: center;
+        .footer-section {
+            width: 100%;
+            text-align: center;
+        }
+    }
+}

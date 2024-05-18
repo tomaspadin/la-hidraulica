@@ -1,0 +1,61 @@
+// Variables
+$background-color: #f8f8f8;
+$box-shadow-color: rgba(0, 0, 0, 0.3);
+$link-color: #333;
+$link-hover-color: #007BFF;
+$border-color: #ccc;
+$text-color: #000;
+
+a {
+    color: $link-color;
+    text-decoration: none;
+    &:hover {
+        color: $link-hover-color;
+    }
+}
+// Estilo
+footer {
+    background-color: $background-color;
+    padding: 20px;
+    box-shadow: 0 -2px 5px $box-shadow-color;
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+        .footer-section {
+            width: 30%;
+            margin-bottom: 20px;
+            h3 {
+                margin-bottom: 10px;
+                font-size: 18px;
+            }
+            p, ul {
+                    margin: 0;
+                }
+            ul {
+                list-style: none;
+                padding: 0;
+                li {
+                    margin-bottom: 5px;
+                    a {
+                        display: flex;
+                        align-items: center;
+                        img, i {
+                            margin-right: 8px;
+                            height: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer-bottom {
+        text-align: center;
+        border-top: 1px solid $border-color;
+        padding-top: 10px;
+        color: $text-color;
+    }
+}
+
+
