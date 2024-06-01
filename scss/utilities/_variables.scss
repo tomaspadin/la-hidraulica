@@ -5,20 +5,18 @@ $font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 $font-family: 'Poppins', sans-serif;
 $font-size: large;
 
-$background-color: #f8f8f8;
+$background-color: #1c1c1c;
 $box-shadow-color: rgba(0, 0, 0, 0.3);
 $link-color: #333;
 $link-hover-color: #007BFF;
 $border-color: #ccc;
 $text-color: #000;
 
-
-
 $banner-height: 55vh;
 $breakpoints: (
     'desktop': 1024px,
     'mobile': 480px
 );
-$box-shadow: 0 7px 12px rgba(0, 0, 0, 0.4);
+$box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.4);
 $border-radius: 10px;
 $white-color: #ffffff;

@@ -7,16 +7,17 @@ body {
   background-color: $tertiary-color;
   margin: 0;
   padding: 0;
-  background-size: cover; // Ajusta la imagen para que cubra todo el fondo
+  background-size: cover; 
   background-repeat: no-repeat;
-  background-attachment: fixed; // Mantiene la imagen fija al hacer scroll
+  background-attachment: fixed; 
   background-position: center;
 }
 
+// estilo
 .main-nosotros {
   padding-top: 2rem;
   .burbuja-parrafo {
-    background-color: rgba(0, 0, 0, 0.85); // Fondo negro con transparencia
+    background-color: rgba(0, 0, 0, 0.85); 
     border-radius: 10px;
     box-shadow: 0 2px 4px rgb(0, 0, 0);
     margin-bottom: 20px;
@@ -40,29 +41,31 @@ body {
       }
     }
   }
+  // burbujas de texto
   .container3 {
     @include flex(row, center, center);
     flex-wrap: wrap;
     gap: 20px;
     padding-bottom: 2rem;
     .bubble {
-      background-color: rgba(0, 0, 0, 0.7); // Fondo negro con transparencia
+      background-color: rgba(0, 0, 0, 0.7); 
       border-radius: 10px;
       box-shadow: 0 2px 4px rgb(0, 0, 0);
       flex: 1 1 calc(50% - 20px);
       padding: 20px;
       p {
-        color: #ffffff; // Texto blanco
+        color: #ffffff; 
       }
     }
   }
+  // carrucel nosotros
   .carrucel-nosotros {
     box-shadow: 0 4px 4px rgb(0, 0, 0);
     background-color: white;
     .carousel {
       .carousel-item {
         img {
-          max-height: 500px;
+          max-height: 650px;
           object-fit: cover;
         }
       }

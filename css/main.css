@@ -20,7 +20,7 @@ main {
   margin: 0 auto;
 }
 
-.text-overlay, .main-index .container1 .card1 .text-bubble2, .main-index .container1 .card1 .text-bubble1 {
+.text-overlay, .main-index .container1 .card1 .text-bubble2, .main-index .container1 .card1 .text-bubble1, .main-index .banner-container .text-overlay {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -31,22 +31,88 @@ main {
   border-radius: 0.5rem;
 }
 
-@media (max-width: 767px) {
-  .text-overlay, .main-index .container1 .card1 .text-bubble2, .main-index .container1 .card1 .text-bubble1 {
+@media (min-width: 768px) and (max-width: 1200px) {
+  .main-index .text-overlay, .main-index .container1 .card1 .text-bubble2, .main-index .container1 .card1 .text-bubble1, .main-index .banner-container .text-overlay {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
   }
-  .text-overlay .quienes, .main-index .container1 .card1 .text-bubble2 .quienes, .main-index .container1 .card1 .text-bubble1 .quienes, .main-index .banner-container .text-overlay .quienes {
-    width: 50%;
+  .main-index .text-overlay .quienes, .main-index .container1 .card1 .text-bubble2 .quienes, .main-index .container1 .card1 .text-bubble1 .quienes {
+    width: 60%;
   }
-  .carousel .card {
+  .main-hidraulica {
+    padding: 0.5rem;
+  }
+  .main-hidraulica .grid-container3 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    color: black;
+  }
+  .main-hidraulica .grid-container3 .grid-item2 {
+    padding: 0.5rem;
+  }
+  .main-hidraulica .grid-container4 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    color: black;
+  }
+  .main-hidraulica .grid-container4 .grid-item2 {
+    padding: 0.5rem;
+  }
+  .main-hidraulica .container2 {
+    margin-top: 0.5rem;
+  }
+  .main-hidraulica .container2 .flex-container2 {
+    flex-direction: column;
+  }
+  .main-hidraulica .container2 .flex-container2 .paragraph-bubble {
+    background-color: #1c1c1c;
     width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    color: white;
+    border-radius: 10px;
+    margin-right: 0.5rem;
+    line-height: 1.2;
+  }
+  .main-aire-acondicionado {
+    padding: 0.5rem;
+  }
+  .main-aire-acondicionado .navbar .navbar-nav {
+    flex-direction: column;
+  }
+  .main-aire-acondicionado .navbar .navbar-nav .nav-item {
+    margin-bottom: 0.5rem;
+  }
+  .main-aire-acondicionado .navbar .form-control {
+    margin-bottom: 0.5rem;
+  }
+  .main-aire-acondicionado .grid-container2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+  }
+  .main-aire-acondicionado .grid-container2 .grid-item, .main-aire-acondicionado .grid-container2 .grid-item2 {
+    padding: 0.5rem;
+  }
+}
+@media (max-width: 767px) {
+  .main-index .text-overlay, .main-index .container1 .card1 .text-bubble2, .main-index .container1 .card1 .text-bubble1, .main-index .banner-container .text-overlay {
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .main-index .text-overlay .quienes, .main-index .container1 .card1 .text-bubble2 .quienes, .main-index .container1 .card1 .text-bubble1 .quienes {
+    width: 70%;
   }
   .container1 {
     flex-direction: column;
-    background-color: black;
+    background-color: #1c1c1c;
   }
   .container1 .card1, .main-index .container1 .card1.card-right, .main-index .container1 .card1.card-left {
     width: 100%;
@@ -94,27 +160,29 @@ main {
   .main-hidraulica .navbar .form-control {
     margin-bottom: 0.5rem;
   }
-  .main-hidraulica .grid-container3 {
+  .main-hidraulica .grid-container3, .main-hidraulica .grid-container4 {
     grid-template-columns: 1fr;
     justify-content: center;
     color: black;
   }
-  .main-hidraulica .grid-container3 .grid-item2 {
+  .main-hidraulica .grid-container3 .grid-item2, .main-hidraulica .grid-container4 .grid-item2 {
     padding: 0.5rem;
   }
-  .main-hidraulica .grid-container3 .grid-item3 {
+  .main-hidraulica .grid-container3 .grid-item3, .main-hidraulica .grid-container4 .grid-item3 {
     padding: 0.5rem;
     height: 20vh;
   }
   .main-hidraulica .container2 {
     margin-top: 0.5rem;
+    padding-left: 0%;
+    padding-right: 0%;
   }
   .main-hidraulica .container2 .flex-container2 {
     flex-direction: column;
   }
   .main-hidraulica .container2 .flex-container2 .paragraph-bubble {
+    width: 100%;
     padding: 1rem;
-    background-color: black;
     font-size: 1.1rem;
     color: white;
     border-radius: 10px;
@@ -139,6 +207,10 @@ main {
   }
   .main-aire-acondicionado .grid-container2 .grid-item, .main-aire-acondicionado .grid-container2 .grid-item2 {
     padding: 0.5rem;
+  }
+  .main-aire-acondicionado .container2 {
+    padding-left: 0%;
+    padding-right: 0%;
   }
   .main-aire-acondicionado .container2 .flex-container2 {
     flex-direction: column;
@@ -198,7 +270,7 @@ main {
     text-align: center;
   }
 }
-.text-overlay, .main-index .container1 .card1 .text-bubble2, .main-index .container1 .card1 .text-bubble1 {
+.text-overlay, .main-index .container1 .card1 .text-bubble2, .main-index .container1 .card1 .text-bubble1, .main-index .banner-container .text-overlay {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -210,7 +282,7 @@ main {
 }
 
 .main-index {
-  background-color: #000000;
+  background-color: #1c1c1c;
   margin: 0 auto;
 }
 .main-index .banner-container {
@@ -255,7 +327,7 @@ main {
   padding: 0.5rem;
   border-radius: 5px;
   margin: 1rem auto;
-  width: 100%;
+  width: 80%;
   box-shadow: 0 0 0.2rem #000000;
 }
 .main-index .search-form .search-input {
@@ -280,6 +352,8 @@ main {
 .main-index .servicios {
   color: white;
   border-radius: 10px;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 .main-index .servicios h2 {
   color: white;
@@ -289,7 +363,7 @@ main {
 .main-index .servicios p {
   padding: 1rem;
   font-family: "Poppins", sans-serif;
-  font-size: large;
+  font-size: 1.2rem;
   line-height: 2;
   text-align: justify;
   color: white;
@@ -349,7 +423,7 @@ main {
 .main-index .videos-container {
   display: flex;
   justify-content: center;
-  background-color: black;
+  background-color: #1c1c1c;
   padding: 1.5rem;
   border-radius: 5px;
 }
@@ -360,8 +434,8 @@ main {
   align-items: center;
   flex-direction: column;
   align-items: center;
-  margin: 0 0.5rem;
-  transition: transform 0.5s ease;
+  margin: 0 1rem;
+  transition: transform 0.8s ease;
 }
 .main-index .videos-container .video-item:hover {
   transform: scale(1.1);
@@ -380,22 +454,88 @@ main {
   font-weight: bold;
 }
 
-@media (max-width: 767px) {
-  .text-overlay, .main-index .container1 .card1 .text-bubble1, .main-index .container1 .card1 .text-bubble2 {
+@media (min-width: 768px) and (max-width: 1200px) {
+  .main-index .text-overlay, .main-index .banner-container .text-overlay, .main-index .container1 .card1 .text-bubble1, .main-index .container1 .card1 .text-bubble2 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
   }
-  .text-overlay .quienes, .main-index .container1 .card1 .text-bubble1 .quienes, .main-index .container1 .card1 .text-bubble2 .quienes, .main-index .banner-container .text-overlay .quienes {
-    width: 50%;
+  .main-index .text-overlay .quienes, .main-index .container1 .card1 .text-bubble1 .quienes, .main-index .container1 .card1 .text-bubble2 .quienes {
+    width: 60%;
   }
-  .carousel .card {
+  .main-hidraulica {
+    padding: 0.5rem;
+  }
+  .main-hidraulica .grid-container3 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    color: black;
+  }
+  .main-hidraulica .grid-container3 .grid-item2 {
+    padding: 0.5rem;
+  }
+  .main-hidraulica .grid-container4 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    color: black;
+  }
+  .main-hidraulica .grid-container4 .grid-item2 {
+    padding: 0.5rem;
+  }
+  .main-hidraulica .container2 {
+    margin-top: 0.5rem;
+  }
+  .main-hidraulica .container2 .flex-container2 {
+    flex-direction: column;
+  }
+  .main-hidraulica .container2 .flex-container2 .paragraph-bubble {
+    background-color: #1c1c1c;
     width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    color: white;
+    border-radius: 10px;
+    margin-right: 0.5rem;
+    line-height: 1.2;
+  }
+  .main-aire-acondicionado {
+    padding: 0.5rem;
+  }
+  .main-aire-acondicionado .navbar .navbar-nav {
+    flex-direction: column;
+  }
+  .main-aire-acondicionado .navbar .navbar-nav .nav-item {
+    margin-bottom: 0.5rem;
+  }
+  .main-aire-acondicionado .navbar .form-control {
+    margin-bottom: 0.5rem;
+  }
+  .main-aire-acondicionado .grid-container2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+  }
+  .main-aire-acondicionado .grid-container2 .grid-item, .main-aire-acondicionado .grid-container2 .grid-item2 {
+    padding: 0.5rem;
+  }
+}
+@media (max-width: 767px) {
+  .main-index .text-overlay, .main-index .banner-container .text-overlay, .main-index .container1 .card1 .text-bubble1, .main-index .container1 .card1 .text-bubble2 {
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .main-index .text-overlay .quienes, .main-index .container1 .card1 .text-bubble1 .quienes, .main-index .container1 .card1 .text-bubble2 .quienes {
+    width: 70%;
   }
   .container1 {
     flex-direction: column;
-    background-color: black;
+    background-color: #1c1c1c;
   }
   .container1 .card1, .main-index .container1 .card1.card-left, .main-index .container1 .card1.card-right {
     width: 100%;
@@ -443,27 +583,29 @@ main {
   .main-hidraulica .navbar .form-control {
     margin-bottom: 0.5rem;
   }
-  .main-hidraulica .grid-container3 {
+  .main-hidraulica .grid-container3, .main-hidraulica .grid-container4 {
     grid-template-columns: 1fr;
     justify-content: center;
     color: black;
   }
-  .main-hidraulica .grid-container3 .grid-item2 {
+  .main-hidraulica .grid-container3 .grid-item2, .main-hidraulica .grid-container4 .grid-item2 {
     padding: 0.5rem;
   }
-  .main-hidraulica .grid-container3 .grid-item3 {
+  .main-hidraulica .grid-container3 .grid-item3, .main-hidraulica .grid-container4 .grid-item3 {
     padding: 0.5rem;
     height: 20vh;
   }
   .main-hidraulica .container2 {
     margin-top: 0.5rem;
+    padding-left: 0%;
+    padding-right: 0%;
   }
   .main-hidraulica .container2 .flex-container2 {
     flex-direction: column;
   }
   .main-hidraulica .container2 .flex-container2 .paragraph-bubble {
+    width: 100%;
     padding: 1rem;
-    background-color: black;
     font-size: 1.1rem;
     color: white;
     border-radius: 10px;
@@ -488,6 +630,10 @@ main {
   }
   .main-aire-acondicionado .grid-container2 .grid-item, .main-aire-acondicionado .grid-container2 .grid-item2 {
     padding: 0.5rem;
+  }
+  .main-aire-acondicionado .container2 {
+    padding-left: 0%;
+    padding-right: 0%;
   }
   .main-aire-acondicionado .container2 .flex-container2 {
     flex-direction: column;
@@ -548,7 +694,7 @@ main {
   }
 }
 .main-hidraulica {
-  background-color: #000000;
+  background-color: #1c1c1c;
 }
 .main-hidraulica .carousel-slide {
   box-shadow: 0 0 0.4rem #000000;
@@ -589,7 +735,7 @@ main {
   color: #0d6efd;
 }
 .main-hidraulica .grid-container3 {
-  background-color: black;
+  background-color: #1c1c1c;
   border-radius: 10px;
   padding-top: 2rem;
   padding-bottom: 2%;
@@ -601,8 +747,8 @@ main {
   margin: 10px auto;
 }
 .main-hidraulica .grid-container3 .grid-item2 {
-  color: black;
-  background-color: #bab7b7;
+  background-color: #3a3939;
+  color: white;
   border-radius: 8px;
   width: 100%;
   height: 100%;
@@ -612,7 +758,7 @@ main {
   transition: transform 1s ease;
 }
 .main-hidraulica .grid-container3 .grid-item2:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   z-index: 1;
 }
 .main-hidraulica .grid-container3 .grid-item2 img {
@@ -629,7 +775,19 @@ main {
   padding: 8px;
   font-size: 20px;
 }
-.main-hidraulica .grid-container3 .grid-item3 {
+.main-hidraulica .grid-container4 {
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  padding-top: 2rem;
+  padding-bottom: 2%;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  width: 95%;
+  margin: 10px auto;
+}
+.main-hidraulica .grid-container4 .grid-item3 {
   background-color: white;
   border-radius: 8px;
   overflow: hidden;
@@ -637,11 +795,11 @@ main {
   text-align: center;
   transition: transform 1s ease;
 }
-.main-hidraulica .grid-container3 .grid-item3:hover {
+.main-hidraulica .grid-container4 .grid-item3:hover {
   transform: scale(1.1);
   z-index: 1;
 }
-.main-hidraulica .grid-container3 .grid-item3 img {
+.main-hidraulica .grid-container4 .grid-item3 img {
   width: 100%;
   height: 16vh;
   display: block;
@@ -651,15 +809,20 @@ main {
 .main-hidraulica .servicios {
   color: rgba(240, 248, 255, 0);
   margin-top: 2rem;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 .main-hidraulica .servicios h2 {
   text-align: left;
+  font-size: 2rem;
   color: white;
   margin-bottom: 1rem;
   margin-left: 1rem;
 }
 .main-hidraulica .container2 {
   margin-top: 1rem;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 .main-hidraulica .container2 .flex-container2 {
   display: flex;
@@ -671,7 +834,8 @@ main {
 }
 .main-hidraulica .container2 .flex-container2 .paragraph-bubble {
   padding: 1rem;
-  background-color: black;
+  width: 70%;
+  background-color: #1c1c1c;
   font-size: 1.5rem;
   color: white;
   border-radius: 10px;
@@ -699,22 +863,88 @@ main {
   font-size: medium;
 }
 
-@media (max-width: 767px) {
-  .text-overlay, .main-index .container1 .card1 .text-bubble1, .main-index .container1 .card1 .text-bubble2 {
+@media (min-width: 768px) and (max-width: 1200px) {
+  .main-index .text-overlay, .main-index .banner-container .text-overlay, .main-index .container1 .card1 .text-bubble1, .main-index .container1 .card1 .text-bubble2 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
   }
-  .text-overlay .quienes, .main-index .container1 .card1 .text-bubble1 .quienes, .main-index .container1 .card1 .text-bubble2 .quienes, .main-index .banner-container .text-overlay .quienes {
-    width: 50%;
+  .main-index .text-overlay .quienes, .main-index .container1 .card1 .text-bubble1 .quienes, .main-index .container1 .card1 .text-bubble2 .quienes {
+    width: 60%;
   }
-  .carousel .card {
+  .main-hidraulica {
+    padding: 0.5rem;
+  }
+  .main-hidraulica .grid-container3 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    color: black;
+  }
+  .main-hidraulica .grid-container3 .grid-item2 {
+    padding: 0.5rem;
+  }
+  .main-hidraulica .grid-container4 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    color: black;
+  }
+  .main-hidraulica .grid-container4 .grid-item2 {
+    padding: 0.5rem;
+  }
+  .main-hidraulica .container2 {
+    margin-top: 0.5rem;
+  }
+  .main-hidraulica .container2 .flex-container2 {
+    flex-direction: column;
+  }
+  .main-hidraulica .container2 .flex-container2 .paragraph-bubble {
+    background-color: #1c1c1c;
     width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    color: white;
+    border-radius: 10px;
+    margin-right: 0.5rem;
+    line-height: 1.2;
+  }
+  .main-aire-acondicionado {
+    padding: 0.5rem;
+  }
+  .main-aire-acondicionado .navbar .navbar-nav {
+    flex-direction: column;
+  }
+  .main-aire-acondicionado .navbar .navbar-nav .nav-item {
+    margin-bottom: 0.5rem;
+  }
+  .main-aire-acondicionado .navbar .form-control {
+    margin-bottom: 0.5rem;
+  }
+  .main-aire-acondicionado .grid-container2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+  }
+  .main-aire-acondicionado .grid-container2 .grid-item, .main-aire-acondicionado .grid-container2 .grid-item2 {
+    padding: 0.5rem;
+  }
+}
+@media (max-width: 767px) {
+  .main-index .text-overlay, .main-index .banner-container .text-overlay, .main-index .container1 .card1 .text-bubble1, .main-index .container1 .card1 .text-bubble2 {
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .main-index .text-overlay .quienes, .main-index .container1 .card1 .text-bubble1 .quienes, .main-index .container1 .card1 .text-bubble2 .quienes {
+    width: 70%;
   }
   .container1 {
     flex-direction: column;
-    background-color: black;
+    background-color: #1c1c1c;
   }
   .container1 .card1, .main-index .container1 .card1.card-left, .main-index .container1 .card1.card-right {
     width: 100%;
@@ -762,27 +992,29 @@ main {
   .main-hidraulica .navbar .form-control {
     margin-bottom: 0.5rem;
   }
-  .main-hidraulica .grid-container3 {
+  .main-hidraulica .grid-container3, .main-hidraulica .grid-container4 {
     grid-template-columns: 1fr;
     justify-content: center;
     color: black;
   }
-  .main-hidraulica .grid-container3 .grid-item2 {
+  .main-hidraulica .grid-container3 .grid-item2, .main-hidraulica .grid-container4 .grid-item2 {
     padding: 0.5rem;
   }
-  .main-hidraulica .grid-container3 .grid-item3 {
+  .main-hidraulica .grid-container3 .grid-item3, .main-hidraulica .grid-container4 .grid-item3 {
     padding: 0.5rem;
     height: 20vh;
   }
   .main-hidraulica .container2 {
     margin-top: 0.5rem;
+    padding-left: 0%;
+    padding-right: 0%;
   }
   .main-hidraulica .container2 .flex-container2 {
     flex-direction: column;
   }
   .main-hidraulica .container2 .flex-container2 .paragraph-bubble {
+    width: 100%;
     padding: 1rem;
-    background-color: black;
     font-size: 1.1rem;
     color: white;
     border-radius: 10px;
@@ -807,6 +1039,10 @@ main {
   }
   .main-aire-acondicionado .grid-container2 .grid-item, .main-aire-acondicionado .grid-container2 .grid-item2 {
     padding: 0.5rem;
+  }
+  .main-aire-acondicionado .container2 {
+    padding-left: 0%;
+    padding-right: 0%;
   }
   .main-aire-acondicionado .container2 .flex-container2 {
     flex-direction: column;
@@ -867,7 +1103,7 @@ main {
   }
 }
 .main-aire-acondicionado {
-  background-color: #000000;
+  background-color: #1c1c1c;
 }
 .main-aire-acondicionado .carousel-slide {
   box-shadow: 0 0 0.4rem #000000;
@@ -902,7 +1138,7 @@ main {
   color: #0d6efd;
 }
 .main-aire-acondicionado .grid-container2 {
-  background-color: black;
+  background-color: #1c1c1c;
   border-radius: 10px;
   padding-bottom: 2%;
   display: grid;
@@ -913,8 +1149,8 @@ main {
   margin: 20px auto;
 }
 .main-aire-acondicionado .grid-container2 .grid-item2 {
-  color: black;
-  background-color: #bab7b7;
+  background-color: #3a3939;
+  color: white;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 7px 12px rgba(0, 0, 0, 0.1);
@@ -922,7 +1158,7 @@ main {
   transition: transform 0.5s ease;
 }
 .main-aire-acondicionado .grid-container2 .grid-item2:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   z-index: 1;
 }
 .main-aire-acondicionado .grid-container2 .grid-item2 img {
@@ -959,7 +1195,7 @@ main {
   transition: transform 0.5s ease;
 }
 .main-aire-acondicionado .grid-container1 .grid-item:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   z-index: 1;
 }
 .main-aire-acondicionado .grid-container1 .grid-item img {
@@ -973,6 +1209,8 @@ main {
 .main-aire-acondicionado .servicios {
   margin-top: 2rem;
   color: white;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 .main-aire-acondicionado .servicios h2 {
   text-align: left;
@@ -980,6 +1218,8 @@ main {
   margin-bottom: 1rem;
 }
 .main-aire-acondicionado .container2 {
+  padding-left: 10%;
+  padding-right: 10%;
   margin-top: 1rem;
 }
 .main-aire-acondicionado .container2 .flex-container2 {
@@ -992,7 +1232,7 @@ main {
 }
 .main-aire-acondicionado .container2 .flex-container2 .paragraph-bubble {
   padding: 1rem;
-  background-color: black;
+  background-color: #1c1c1c;
   color: white;
   border-radius: 10px;
   margin-right: 1rem;
@@ -1005,22 +1245,88 @@ main {
   padding-left: 1rem;
 }
 
-@media (max-width: 767px) {
-  .text-overlay, .main-index .container1 .card1 .text-bubble1, .main-index .container1 .card1 .text-bubble2 {
+@media (min-width: 768px) and (max-width: 1200px) {
+  .main-index .text-overlay, .main-index .banner-container .text-overlay, .main-index .container1 .card1 .text-bubble1, .main-index .container1 .card1 .text-bubble2 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
   }
-  .text-overlay .quienes, .main-index .container1 .card1 .text-bubble1 .quienes, .main-index .container1 .card1 .text-bubble2 .quienes, .main-index .banner-container .text-overlay .quienes {
-    width: 50%;
+  .main-index .text-overlay .quienes, .main-index .container1 .card1 .text-bubble1 .quienes, .main-index .container1 .card1 .text-bubble2 .quienes {
+    width: 60%;
   }
-  .carousel .card {
+  .main-hidraulica {
+    padding: 0.5rem;
+  }
+  .main-hidraulica .grid-container3 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    color: black;
+  }
+  .main-hidraulica .grid-container3 .grid-item2 {
+    padding: 0.5rem;
+  }
+  .main-hidraulica .grid-container4 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    color: black;
+  }
+  .main-hidraulica .grid-container4 .grid-item2 {
+    padding: 0.5rem;
+  }
+  .main-hidraulica .container2 {
+    margin-top: 0.5rem;
+  }
+  .main-hidraulica .container2 .flex-container2 {
+    flex-direction: column;
+  }
+  .main-hidraulica .container2 .flex-container2 .paragraph-bubble {
+    background-color: #1c1c1c;
     width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    color: white;
+    border-radius: 10px;
+    margin-right: 0.5rem;
+    line-height: 1.2;
+  }
+  .main-aire-acondicionado {
+    padding: 0.5rem;
+  }
+  .main-aire-acondicionado .navbar .navbar-nav {
+    flex-direction: column;
+  }
+  .main-aire-acondicionado .navbar .navbar-nav .nav-item {
+    margin-bottom: 0.5rem;
+  }
+  .main-aire-acondicionado .navbar .form-control {
+    margin-bottom: 0.5rem;
+  }
+  .main-aire-acondicionado .grid-container2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+  }
+  .main-aire-acondicionado .grid-container2 .grid-item, .main-aire-acondicionado .grid-container2 .grid-item2 {
+    padding: 0.5rem;
+  }
+}
+@media (max-width: 767px) {
+  .main-index .text-overlay, .main-index .banner-container .text-overlay, .main-index .container1 .card1 .text-bubble1, .main-index .container1 .card1 .text-bubble2 {
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .main-index .text-overlay .quienes, .main-index .container1 .card1 .text-bubble1 .quienes, .main-index .container1 .card1 .text-bubble2 .quienes {
+    width: 70%;
   }
   .container1 {
     flex-direction: column;
-    background-color: black;
+    background-color: #1c1c1c;
   }
   .container1 .card1, .main-index .container1 .card1.card-left, .main-index .container1 .card1.card-right {
     width: 100%;
@@ -1068,27 +1374,29 @@ main {
   .main-hidraulica .navbar .form-control {
     margin-bottom: 0.5rem;
   }
-  .main-hidraulica .grid-container3 {
+  .main-hidraulica .grid-container3, .main-hidraulica .grid-container4 {
     grid-template-columns: 1fr;
     justify-content: center;
     color: black;
   }
-  .main-hidraulica .grid-container3 .grid-item2 {
+  .main-hidraulica .grid-container3 .grid-item2, .main-hidraulica .grid-container4 .grid-item2 {
     padding: 0.5rem;
   }
-  .main-hidraulica .grid-container3 .grid-item3 {
+  .main-hidraulica .grid-container3 .grid-item3, .main-hidraulica .grid-container4 .grid-item3 {
     padding: 0.5rem;
     height: 20vh;
   }
   .main-hidraulica .container2 {
     margin-top: 0.5rem;
+    padding-left: 0%;
+    padding-right: 0%;
   }
   .main-hidraulica .container2 .flex-container2 {
     flex-direction: column;
   }
   .main-hidraulica .container2 .flex-container2 .paragraph-bubble {
+    width: 100%;
     padding: 1rem;
-    background-color: black;
     font-size: 1.1rem;
     color: white;
     border-radius: 10px;
@@ -1113,6 +1421,10 @@ main {
   }
   .main-aire-acondicionado .grid-container2 .grid-item, .main-aire-acondicionado .grid-container2 .grid-item2 {
     padding: 0.5rem;
+  }
+  .main-aire-acondicionado .container2 {
+    padding-left: 0%;
+    padding-right: 0%;
   }
   .main-aire-acondicionado .container2 .flex-container2 {
     flex-direction: column;
@@ -1238,7 +1550,7 @@ body {
   background-color: white;
 }
 .main-nosotros .carrucel-nosotros .carousel .carousel-item img {
-  max-height: 500px;
+  max-height: 650px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1247,22 +1559,88 @@ body {
   filter: invert(1);
 }
 
-@media (max-width: 767px) {
-  .text-overlay, .main-index .container1 .card1 .text-bubble1, .main-index .container1 .card1 .text-bubble2 {
+@media (min-width: 768px) and (max-width: 1200px) {
+  .main-index .text-overlay, .main-index .banner-container .text-overlay, .main-index .container1 .card1 .text-bubble1, .main-index .container1 .card1 .text-bubble2 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
   }
-  .text-overlay .quienes, .main-index .container1 .card1 .text-bubble1 .quienes, .main-index .container1 .card1 .text-bubble2 .quienes, .main-index .banner-container .text-overlay .quienes {
-    width: 50%;
+  .main-index .text-overlay .quienes, .main-index .container1 .card1 .text-bubble1 .quienes, .main-index .container1 .card1 .text-bubble2 .quienes {
+    width: 60%;
   }
-  .carousel .card {
+  .main-hidraulica {
+    padding: 0.5rem;
+  }
+  .main-hidraulica .grid-container3 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    color: black;
+  }
+  .main-hidraulica .grid-container3 .grid-item2 {
+    padding: 0.5rem;
+  }
+  .main-hidraulica .grid-container4 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    color: black;
+  }
+  .main-hidraulica .grid-container4 .grid-item2 {
+    padding: 0.5rem;
+  }
+  .main-hidraulica .container2 {
+    margin-top: 0.5rem;
+  }
+  .main-hidraulica .container2 .flex-container2 {
+    flex-direction: column;
+  }
+  .main-hidraulica .container2 .flex-container2 .paragraph-bubble {
+    background-color: #1c1c1c;
     width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    color: white;
+    border-radius: 10px;
+    margin-right: 0.5rem;
+    line-height: 1.2;
+  }
+  .main-aire-acondicionado {
+    padding: 0.5rem;
+  }
+  .main-aire-acondicionado .navbar .navbar-nav {
+    flex-direction: column;
+  }
+  .main-aire-acondicionado .navbar .navbar-nav .nav-item {
+    margin-bottom: 0.5rem;
+  }
+  .main-aire-acondicionado .navbar .form-control {
+    margin-bottom: 0.5rem;
+  }
+  .main-aire-acondicionado .grid-container2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+  }
+  .main-aire-acondicionado .grid-container2 .grid-item, .main-aire-acondicionado .grid-container2 .grid-item2 {
+    padding: 0.5rem;
+  }
+}
+@media (max-width: 767px) {
+  .main-index .text-overlay, .main-index .banner-container .text-overlay, .main-index .container1 .card1 .text-bubble1, .main-index .container1 .card1 .text-bubble2 {
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .main-index .text-overlay .quienes, .main-index .container1 .card1 .text-bubble1 .quienes, .main-index .container1 .card1 .text-bubble2 .quienes {
+    width: 70%;
   }
   .container1 {
     flex-direction: column;
-    background-color: black;
+    background-color: #1c1c1c;
   }
   .container1 .card1, .main-index .container1 .card1.card-left, .main-index .container1 .card1.card-right {
     width: 100%;
@@ -1310,27 +1688,29 @@ body {
   .main-hidraulica .navbar .form-control {
     margin-bottom: 0.5rem;
   }
-  .main-hidraulica .grid-container3 {
+  .main-hidraulica .grid-container3, .main-hidraulica .grid-container4 {
     grid-template-columns: 1fr;
     justify-content: center;
     color: black;
   }
-  .main-hidraulica .grid-container3 .grid-item2 {
+  .main-hidraulica .grid-container3 .grid-item2, .main-hidraulica .grid-container4 .grid-item2 {
     padding: 0.5rem;
   }
-  .main-hidraulica .grid-container3 .grid-item3 {
+  .main-hidraulica .grid-container3 .grid-item3, .main-hidraulica .grid-container4 .grid-item3 {
     padding: 0.5rem;
     height: 20vh;
   }
   .main-hidraulica .container2 {
     margin-top: 0.5rem;
+    padding-left: 0%;
+    padding-right: 0%;
   }
   .main-hidraulica .container2 .flex-container2 {
     flex-direction: column;
   }
   .main-hidraulica .container2 .flex-container2 .paragraph-bubble {
+    width: 100%;
     padding: 1rem;
-    background-color: black;
     font-size: 1.1rem;
     color: white;
     border-radius: 10px;
@@ -1355,6 +1735,10 @@ body {
   }
   .main-aire-acondicionado .grid-container2 .grid-item, .main-aire-acondicionado .grid-container2 .grid-item2 {
     padding: 0.5rem;
+  }
+  .main-aire-acondicionado .container2 {
+    padding-left: 0%;
+    padding-right: 0%;
   }
   .main-aire-acondicionado .container2 .flex-container2 {
     flex-direction: column;
@@ -1415,12 +1799,12 @@ body {
   }
 }
 .seccion {
-  background-color: black;
+  background-color: #1c1c1c;
   color: white;
   margin: 1rem auto;
-  max-width: 100%;
+  max-width: 95%;
   padding: 2rem;
-  box-shadow: 0 7px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.4);
 }
 .seccion h2, .seccion h3 {
   text-align: center;
@@ -1526,16 +1910,17 @@ body {
 .carousel-container1 {
   width: 100%;
   overflow: hidden;
-  background-color: #000;
+  background-color: #1c1c1c;
 }
 
 .carousel1 {
   display: flex;
   animation: scroll 30s linear infinite;
+  padding-bottom: 2rem;
   width: 100%;
 }
 .carousel1 .card1, .carousel1 .main-index .container1 .card1.card-left, .main-index .container1 .carousel1 .card1.card-left, .carousel1 .main-index .container1 .card1.card-right, .main-index .container1 .carousel1 .card1.card-right {
-  width: 25%;
+  width: 20%;
   flex-shrink: 0;
   margin: 10px;
   background-color: #3a3939;
@@ -1569,6 +1954,14 @@ body {
     transform: translateX(-100%);
   }
 }
+@media (min-width: 768px) and (max-width: 1240px) {
+  .carousel1 .card1, .carousel1 .main-index .container1 .card1.card-left, .main-index .container1 .carousel1 .card1.card-left, .carousel1 .main-index .container1 .card1.card-right, .main-index .container1 .carousel1 .card1.card-right {
+    width: 35%;
+  }
+  .carousel1 .card1 img, .carousel1 .main-index .container1 .card1.card-left img, .main-index .container1 .carousel1 .card1.card-left img, .carousel1 .main-index .container1 .card1.card-right img, .main-index .container1 .carousel1 .card1.card-right img {
+    height: 20vh;
+  }
+}
 @media screen and (max-width: 767px) {
   .carousel1 .card1, .carousel1 .main-index .container1 .card1.card-left, .main-index .container1 .carousel1 .card1.card-left, .carousel1 .main-index .container1 .card1.card-right, .main-index .container1 .carousel1 .card1.card-right {
     width: 75%;
@@ -1577,22 +1970,88 @@ body {
     height: 20vh;
   }
 }
-@media (max-width: 767px) {
-  .text-overlay, .main-index .container1 .card1 .text-bubble1, .main-index .container1 .card1 .text-bubble2 {
+@media (min-width: 768px) and (max-width: 1200px) {
+  .main-index .text-overlay, .main-index .banner-container .text-overlay, .main-index .container1 .card1 .text-bubble1, .main-index .container1 .card1 .text-bubble2 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
   }
-  .text-overlay .quienes, .main-index .container1 .card1 .text-bubble1 .quienes, .main-index .container1 .card1 .text-bubble2 .quienes, .main-index .banner-container .text-overlay .quienes {
-    width: 50%;
+  .main-index .text-overlay .quienes, .main-index .container1 .card1 .text-bubble1 .quienes, .main-index .container1 .card1 .text-bubble2 .quienes {
+    width: 60%;
   }
-  .carousel .card {
+  .main-hidraulica {
+    padding: 0.5rem;
+  }
+  .main-hidraulica .grid-container3 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    color: black;
+  }
+  .main-hidraulica .grid-container3 .grid-item2 {
+    padding: 0.5rem;
+  }
+  .main-hidraulica .grid-container4 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    color: black;
+  }
+  .main-hidraulica .grid-container4 .grid-item2 {
+    padding: 0.5rem;
+  }
+  .main-hidraulica .container2 {
+    margin-top: 0.5rem;
+  }
+  .main-hidraulica .container2 .flex-container2 {
+    flex-direction: column;
+  }
+  .main-hidraulica .container2 .flex-container2 .paragraph-bubble {
+    background-color: #1c1c1c;
     width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    color: white;
+    border-radius: 10px;
+    margin-right: 0.5rem;
+    line-height: 1.2;
+  }
+  .main-aire-acondicionado {
+    padding: 0.5rem;
+  }
+  .main-aire-acondicionado .navbar .navbar-nav {
+    flex-direction: column;
+  }
+  .main-aire-acondicionado .navbar .navbar-nav .nav-item {
+    margin-bottom: 0.5rem;
+  }
+  .main-aire-acondicionado .navbar .form-control {
+    margin-bottom: 0.5rem;
+  }
+  .main-aire-acondicionado .grid-container2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+  }
+  .main-aire-acondicionado .grid-container2 .grid-item, .main-aire-acondicionado .grid-container2 .grid-item2 {
+    padding: 0.5rem;
+  }
+}
+@media (max-width: 767px) {
+  .main-index .text-overlay, .main-index .banner-container .text-overlay, .main-index .container1 .card1 .text-bubble1, .main-index .container1 .card1 .text-bubble2 {
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .main-index .text-overlay .quienes, .main-index .container1 .card1 .text-bubble1 .quienes, .main-index .container1 .card1 .text-bubble2 .quienes {
+    width: 70%;
   }
   .container1 {
     flex-direction: column;
-    background-color: black;
+    background-color: #1c1c1c;
   }
   .container1 .card1, .main-index .container1 .card1.card-left, .main-index .container1 .card1.card-right {
     width: 100%;
@@ -1640,27 +2099,29 @@ body {
   .main-hidraulica .navbar .form-control {
     margin-bottom: 0.5rem;
   }
-  .main-hidraulica .grid-container3 {
+  .main-hidraulica .grid-container3, .main-hidraulica .grid-container4 {
     grid-template-columns: 1fr;
     justify-content: center;
     color: black;
   }
-  .main-hidraulica .grid-container3 .grid-item2 {
+  .main-hidraulica .grid-container3 .grid-item2, .main-hidraulica .grid-container4 .grid-item2 {
     padding: 0.5rem;
   }
-  .main-hidraulica .grid-container3 .grid-item3 {
+  .main-hidraulica .grid-container3 .grid-item3, .main-hidraulica .grid-container4 .grid-item3 {
     padding: 0.5rem;
     height: 20vh;
   }
   .main-hidraulica .container2 {
     margin-top: 0.5rem;
+    padding-left: 0%;
+    padding-right: 0%;
   }
   .main-hidraulica .container2 .flex-container2 {
     flex-direction: column;
   }
   .main-hidraulica .container2 .flex-container2 .paragraph-bubble {
+    width: 100%;
     padding: 1rem;
-    background-color: black;
     font-size: 1.1rem;
     color: white;
     border-radius: 10px;
@@ -1685,6 +2146,10 @@ body {
   }
   .main-aire-acondicionado .grid-container2 .grid-item, .main-aire-acondicionado .grid-container2 .grid-item2 {
     padding: 0.5rem;
+  }
+  .main-aire-acondicionado .container2 {
+    padding-left: 0%;
+    padding-right: 0%;
   }
   .main-aire-acondicionado .container2 .flex-container2 {
     flex-direction: column;
@@ -1753,7 +2218,7 @@ a:hover {
 }
 
 footer {
-  background-color: #f8f8f8;
+  background-color: rgba(255, 255, 255, 0.955);
   padding: 20px;
   font-size: large;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
@@ -1797,22 +2262,88 @@ footer .footer-bottom {
   color: #000;
 }
 
-@media (max-width: 767px) {
-  .text-overlay, .main-index .container1 .card1 .text-bubble1, .main-index .container1 .card1 .text-bubble2 {
+@media (min-width: 768px) and (max-width: 1200px) {
+  .main-index .text-overlay, .main-index .banner-container .text-overlay, .main-index .container1 .card1 .text-bubble1, .main-index .container1 .card1 .text-bubble2 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
   }
-  .text-overlay .quienes, .main-index .container1 .card1 .text-bubble1 .quienes, .main-index .container1 .card1 .text-bubble2 .quienes, .main-index .banner-container .text-overlay .quienes {
-    width: 50%;
+  .main-index .text-overlay .quienes, .main-index .container1 .card1 .text-bubble1 .quienes, .main-index .container1 .card1 .text-bubble2 .quienes {
+    width: 60%;
   }
-  .carousel .card {
+  .main-hidraulica {
+    padding: 0.5rem;
+  }
+  .main-hidraulica .grid-container3 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    color: black;
+  }
+  .main-hidraulica .grid-container3 .grid-item2 {
+    padding: 0.5rem;
+  }
+  .main-hidraulica .grid-container4 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    color: black;
+  }
+  .main-hidraulica .grid-container4 .grid-item2 {
+    padding: 0.5rem;
+  }
+  .main-hidraulica .container2 {
+    margin-top: 0.5rem;
+  }
+  .main-hidraulica .container2 .flex-container2 {
+    flex-direction: column;
+  }
+  .main-hidraulica .container2 .flex-container2 .paragraph-bubble {
+    background-color: #1c1c1c;
     width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    color: white;
+    border-radius: 10px;
+    margin-right: 0.5rem;
+    line-height: 1.2;
+  }
+  .main-aire-acondicionado {
+    padding: 0.5rem;
+  }
+  .main-aire-acondicionado .navbar .navbar-nav {
+    flex-direction: column;
+  }
+  .main-aire-acondicionado .navbar .navbar-nav .nav-item {
+    margin-bottom: 0.5rem;
+  }
+  .main-aire-acondicionado .navbar .form-control {
+    margin-bottom: 0.5rem;
+  }
+  .main-aire-acondicionado .grid-container2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+  }
+  .main-aire-acondicionado .grid-container2 .grid-item, .main-aire-acondicionado .grid-container2 .grid-item2 {
+    padding: 0.5rem;
+  }
+}
+@media (max-width: 767px) {
+  .main-index .text-overlay, .main-index .banner-container .text-overlay, .main-index .container1 .card1 .text-bubble1, .main-index .container1 .card1 .text-bubble2 {
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .main-index .text-overlay .quienes, .main-index .container1 .card1 .text-bubble1 .quienes, .main-index .container1 .card1 .text-bubble2 .quienes {
+    width: 70%;
   }
   .container1 {
     flex-direction: column;
-    background-color: black;
+    background-color: #1c1c1c;
   }
   .container1 .card1, .main-index .container1 .card1.card-left, .main-index .container1 .card1.card-right {
     width: 100%;
@@ -1860,27 +2391,29 @@ footer .footer-bottom {
   .main-hidraulica .navbar .form-control {
     margin-bottom: 0.5rem;
   }
-  .main-hidraulica .grid-container3 {
+  .main-hidraulica .grid-container3, .main-hidraulica .grid-container4 {
     grid-template-columns: 1fr;
     justify-content: center;
     color: black;
   }
-  .main-hidraulica .grid-container3 .grid-item2 {
+  .main-hidraulica .grid-container3 .grid-item2, .main-hidraulica .grid-container4 .grid-item2 {
     padding: 0.5rem;
   }
-  .main-hidraulica .grid-container3 .grid-item3 {
+  .main-hidraulica .grid-container3 .grid-item3, .main-hidraulica .grid-container4 .grid-item3 {
     padding: 0.5rem;
     height: 20vh;
   }
   .main-hidraulica .container2 {
     margin-top: 0.5rem;
+    padding-left: 0%;
+    padding-right: 0%;
   }
   .main-hidraulica .container2 .flex-container2 {
     flex-direction: column;
   }
   .main-hidraulica .container2 .flex-container2 .paragraph-bubble {
+    width: 100%;
     padding: 1rem;
-    background-color: black;
     font-size: 1.1rem;
     color: white;
     border-radius: 10px;
@@ -1905,6 +2438,10 @@ footer .footer-bottom {
   }
   .main-aire-acondicionado .grid-container2 .grid-item, .main-aire-acondicionado .grid-container2 .grid-item2 {
     padding: 0.5rem;
+  }
+  .main-aire-acondicionado .container2 {
+    padding-left: 0%;
+    padding-right: 0%;
   }
   .main-aire-acondicionado .container2 .flex-container2 {
     flex-direction: column;

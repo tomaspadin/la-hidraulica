@@ -1,5 +1,3 @@
-// Variables
-
 @import "../utilities/media-queries";
 @import "../utilities/variables";
 
@@ -10,8 +8,10 @@ a {
         color: $link-hover-color;
     }
 }
+
+// estilo
 footer {
-    background-color: $background-color;
+    background-color: rgba(255, 255, 255, 0.955);
     padding: 20px;
     font-size: large;
     box-shadow: 0 -2px 5px $box-shadow-color;

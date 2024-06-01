@@ -1,18 +1,21 @@
+// estilo
+
 .carousel-container1 {
     width: 100%;
     overflow: hidden;
-    background-color: #000; // Fondo negro para el contenedor del carrusel
+    background-color: $background-color; 
 }
 
 .carousel1 {
     display: flex;
     animation: scroll 30s linear infinite;
-    width: 100%; // Ajusta esto según la cantidad de imágenes para asegurar que el bucle sea continuo
+    padding-bottom: 2rem;
+    width: 100%; 
     .card1 {
-        width: 25%; // Mostrar 4 imágenes a la vez en pantallas grandes
+        width: 20%;
         flex-shrink: 0;
         margin: 10px;
-        background-color: #3a3939; // Fondo gris oscuro para las cards
+        background-color: #3a3939; 
         border-radius: 10px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
         overflow: hidden;
@@ -30,7 +33,7 @@
         }
         p {
             margin: 10px 0;
-            color: #fff; // Texto blanco
+            color: #fff; 
         }
     }
 }
@@ -43,6 +46,21 @@
         transform: translateX(-100%);
     }
 }
+
+// media queries
+
+@media (min-width: 768px) and (max-width: 1240px) {
+    .carousel1 {
+        .card1 {
+            width: 35%; 
+            img {
+                height: 20vh;
+            }
+        }
+    }
+}
+
+
 @media screen and (max-width: 767px) {
     .carousel1 {
         .card1 {

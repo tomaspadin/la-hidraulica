@@ -1,23 +1,94 @@
 
-@media (max-width: 767px) {
-    // Index
-    .text-overlay {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        .quienes {
-            width: 50%;
+@media (min-width: 768px) and (max-width: 1200px) {
+    .main-index {
+        .text-overlay {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            .quienes {
+                width: 60%;
+            }
         }
     }
-    .carousel {
-        .card {
-            width: 100%; 
+    .main-hidraulica {
+        padding: 0.5rem;
+        .grid-container3 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-content: center;
+            color: black;
+            .grid-item2 {
+                padding: 0.5rem;
+            }
+        }
+        .grid-container4 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: center;
+            color: black;
+            .grid-item2 {
+                padding: 0.5rem;
+            }
+        }
+        .container2 {
+            margin-top: 0.5rem;        
+            .flex-container2 {
+                flex-direction: column;
+                .paragraph-bubble {
+                    background-color: $background-color;
+                    width: 100%;
+                    padding: 1rem;
+                    font-size: 1.1rem;
+                    color: white;
+                    border-radius: 10px;
+                    margin-right: 0.5rem;
+                    line-height: 1.2;
+                }
+            }
+        }
+    }
+    .main-aire-acondicionado {
+        padding: 0.5rem;
+        .navbar {
+            .navbar-nav {
+                flex-direction: column;
+                .nav-item {
+                    margin-bottom: 0.5rem;
+                }
+            }
+            .form-control {
+                margin-bottom: 0.5rem;
+            }
+        }
+        .grid-container2 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-content: center;
+            .grid-item, .grid-item2 {
+                padding: 0.5rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    // Index
+    .main-index {
+        .text-overlay {
+            top: 50%;
+            left: 50%;
+            width: 80%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            .quienes {
+                width: 70%;
+            }
         }
     }
     .container1 {
         flex-direction: column;
-        background-color: black;
+        background-color: $background-color;
         .card1 {
             width: 100%;
             height: auto;
@@ -54,7 +125,7 @@
             line-height: 1.4;
         }
     }
-
+    // hidraulica
     .main-hidraulica {
         padding: 0.5rem;
         .navbar {
@@ -68,7 +139,7 @@
                 margin-bottom: 0.5rem;
             }
         }
-        .grid-container3 {
+        .grid-container3, .grid-container4 {
             grid-template-columns: 1fr;
             justify-content: center;
             color: black;
@@ -81,12 +152,14 @@
             }
         }
         .container2 {
-            margin-top: 0.5rem;        
+            margin-top: 0.5rem;     
+            padding-left: 0%;
+            padding-right: 0%;   
             .flex-container2 {
                 flex-direction: column;
                 .paragraph-bubble {
+                    width: 100%;
                     padding: 1rem;
-                    background-color: black;
                     font-size: 1.1rem;
                     color: white;
                     border-radius: 10px;
@@ -96,6 +169,7 @@
             }
         }
     }
+    // Aire acondicionado
     .main-aire-acondicionado {
         padding: 0.5rem;
         .navbar {
@@ -117,6 +191,8 @@
             }
         }
         .container2 {
+            padding-left: 0%;
+            padding-right: 0%;
             .flex-container2 {
                 flex-direction: column;
                 .paragraph-bubble {
@@ -152,11 +228,11 @@
             }
         }
         .container3 {
-            flex-direction: column; // Apila los elementos en columna
-            align-items: stretch; // Ajusta el ancho de los elementos al contenedor
+            flex-direction: column;
+            align-items: stretch; 
         }
         .bubble {
-            flex: none; // Restaura el tamaño de la flexibilidad para que no se estire
+            flex: none; 
             width: 100%; 
         }
     }

@@ -3,10 +3,10 @@
 @import "../utilities/media-queries";
 
 .seccion {
-    background-color: black;
+    background-color: $background-color;
     color: white;
     margin: 1rem auto;
-    max-width: 100%;
+    max-width: 95%;
     padding: 2rem;
     box-shadow: $box-shadow;
     h2, h3 {

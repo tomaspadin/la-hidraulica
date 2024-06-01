@@ -6,8 +6,9 @@
 
 
 .main-index {
-    background-color: #000000;
+    background-color: $background-color;
     margin: 0 auto;
+    // banner
     .banner-container {
         position: relative;
         height: 45vh;
@@ -23,6 +24,7 @@
             object-fit: cover;
         }
         .text-overlay {
+            @extend .text-overlay;
             font-family: 'Poppins', sans-serif;
             position: absolute;
             top: 50%;
@@ -30,7 +32,6 @@
             color: white;
             font-weight: 600;
             .quienes {
-                @extend .quienes;
                 display: inline-block;
                 padding: 0.5rem 1rem;
                 border-radius: 0.5rem;
@@ -43,6 +44,7 @@
             }
         }
     }
+    // boton de busqueda
     .search-form {
         display: flex;
         align-items: center;
@@ -50,7 +52,7 @@
         padding: 0.5rem;
         border-radius: 5px;
         margin: 1rem auto;
-        width: 100%;
+        width: 80%;
         box-shadow: 0 0 0.2rem #000000;
         .search-input {
             width: 100%;
@@ -72,9 +74,12 @@
             background-color: #49c2e0;
         }
     }
+    // textos
     .servicios {
         color: white;
         border-radius: $border-radius;
+        padding-left: 10%;
+        padding-right: 10%;
         h2 {
             color: white;
             font-size: 2rem;
@@ -83,13 +88,13 @@
         p {
             padding: 1rem;
             font-family: 'Poppins', sans-serif;
-            font-size: $font-size;
+            font-size: 1.2rem;
             line-height: 2;
             text-align: justify;
             color: white;
         }
     }
-    
+    // cards animadas
     .container1{
         height: 40vh;
         display: flex;
@@ -143,28 +148,28 @@
             }
         }
     }
+    // videos
     .videos-container {
         display: flex;
         justify-content: center;
-        background-color: black;
+        background-color: $background-color;
         padding: 1.5rem;
         border-radius: 5px;
         .video-item {
             @include flex(row, center, center);
             flex-direction: column;
             align-items: center;
-            margin: 0 0.5rem;
-            transition: transform 0.5s ease; // Añade una transición suave
+            margin: 0 1rem;
+            transition: transform 0.8s ease; 
             &:hover {
-                transform: scale(1.1); // Agranda el video al pasar el cursor
-                z-index: 1; // Asegura que el video agrandado esté por encima de los demás
+                transform: scale(1.1); 
+                z-index: 1; 
             }
             video {
                 max-width: 100%;
                 border-radius: 5px;
                 border: none;
             }
-    
             .label {
                 font-size: $font-size;
                 margin-top: 0.3rem;
