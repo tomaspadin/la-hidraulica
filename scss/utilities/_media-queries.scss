@@ -1,43 +1,23 @@
-@media (max-width: 1023px) and (min-width: 768px) {
-    // aire acondicionado
-    .main-aire-acondicionado {
-        padding: 1rem;
-        .navbar {
-            .navbar-nav {
-                flex-direction: column;
-                .nav-item {
-                    margin-bottom: 1rem;
-                }
-            }
-            .form-control {
-                margin-bottom: 1rem;
-            }
-        }
-        .grid-container, .grid-container1, .grid-container2 {
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            .grid-item, .grid-item2 {
-                padding: 0.5rem;
-            }
-        }
-        .container2 {
-            .flex-container2 {
-                flex-direction: column;
-                align-items: center;
-                max-width: fit-content;
-                .paragraph-bubble {
-                    margin-bottom: 1rem;
-                    margin-right: 0;
-                }
-            }
-        }
-    }
-
-}
-
-
 
 @media (max-width: 767px) {
+    .imagen3 {
+        display: none; 
+    }
     // Index
+    .text-overlay {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        .quienes {
+            width: 50%;
+        }
+    }
+    .carousel {
+        .card {
+            width: 100%; 
+        }
+    }
     .container1 {
         flex-direction: column;
         background-color: black;
@@ -45,13 +25,18 @@
             width: 100%;
             height: auto;
             &.card-left, &.card-right {
+                transform: translateX(0);
                 clip-path: none;
+            }
+            .text-bubble1, .text-bubble2 {
+                justify-content: center;
             }
         }
     }
     
     .videos-container {
         flex-direction: column;
+        justify-content: center;
         .video-item {
             width: 100%;
             margin: 0.5rem 0;
@@ -72,15 +57,48 @@
             line-height: 1.4;
         }
     }
-    .imagen3 {
-        display: none; 
-    }
-    // Aire acondicionado
-    .flex-container2 {
-        @include flex(column, center, center);
-    }
 
-    // Aire acondicionado
+    .main-hidraulica {
+        padding: 0.5rem;
+        .navbar {
+            .navbar-nav {
+                flex-direction: column;
+                .nav-item {
+                    margin-bottom: 0.5rem;
+                }
+            }
+            .form-control {
+                margin-bottom: 0.5rem;
+            }
+        }
+        .grid-container3 {
+            grid-template-columns: 1fr;
+            justify-content: center;
+            color: black;
+            .grid-item2 {
+                padding: 0.5rem;
+            }
+            .grid-item3 {
+                padding: 0.5rem;
+                height: 20vh;
+            }
+        }
+        .container2 {
+            margin-top: 0.5rem;        
+            .flex-container2 {
+                flex-direction: column;
+                .paragraph-bubble {
+                    padding: 1rem;
+                    background-color: black;
+                    font-size: 1.1rem;
+                    color: white;
+                    border-radius: 10px;
+                    margin-right: 0.5rem;
+                    line-height: 1.2;
+                }
+            }
+        }
+    }
     .main-aire-acondicionado {
         padding: 0.5rem;
         .navbar {
@@ -97,7 +115,6 @@
         .grid-container2 {
             grid-template-columns: 1fr;
             justify-content: center;
-            background-color: black;
             .grid-item, .grid-item2 {
                 padding: 0.5rem;
             }
@@ -115,6 +132,9 @@
                 
             }
         }
+        .servicios h2 {
+            font-size: 2rem;
+        }
         .grid-container1 {
             @include flex(column, center, center);
             .grid-item {
@@ -123,36 +143,29 @@
         }
     }
     // Nosotros
-    .container1 {
-        flex-direction: column;
-        height: auto;
-    }
-    
-    .container3 {
-        grid-template-columns: 1fr;
-    }
-    
-    .vision-container {
-        flex-direction: column;
-        
-        .texto, .imagen {
-            margin: 0;
-            flex: none;
-            width: 100%;
+    .main-nosotros {
+        .container3 {
+            flex-direction: column; // Apila los elementos en columna
+            align-items: stretch; // Ajusta el ancho de los elementos al contenedor
+        }
+        .bubble {
+            flex: none; // Restaura el tamaño de la flexibilidad para que no se estire
+            width: 100%; 
         }
     }
     // Contacto
-    .contacto {
-        flex-direction: column;
-        form {
-            padding-right: 0;
-            padding-bottom: 2rem;
-        }
-        .mapa {
-            padding-left: 0;
+    .main-contacto{
+        .contacto {
+            flex-direction: column;
+            form {
+                padding-right: 0;
+                padding-bottom: 1rem;
+            }
+            .mapa {
+                padding-left: 0;
+            }
         }
     }
-    
     // Footer
     footer .footer-container {
         flex-direction: column;

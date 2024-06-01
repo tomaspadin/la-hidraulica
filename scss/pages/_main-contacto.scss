@@ -1,30 +1,25 @@
-// Variables
-$primary-color: #b2ebf2;
-$secondary-color: #62b4ca;
-$font-family: 'Poppins', sans-serif;
-$box-shadow: 0 0 0.20rem #000000;
-$banner-height: 55vh;
-a {
-    text-decoration: none;
-}
+@import "../utilities/variables";
+@import "../utilities/mixins";
+@import "../utilities/media-queries";
 
-// Estilo
 .seccion {
-    background-color: $background-color;
-    margin: 2rem auto;
-    max-width: 80%;
+    background-color: black;
+    color: white;
+    margin: 1rem auto;
+    max-width: 100%;
     padding: 2rem;
     box-shadow: $box-shadow;
     h2, h3 {
         text-align: center;
         margin-bottom: 1.5rem;
         font-family: $font-family;
+        font-size: 3rem;
     }
 }
 .contacto {
     padding-top: 5%;
-    display: flex;
-    flex-direction: row;
+    @include flex(row, center, center);
+    @include font-setup($weight: normal, $line-height: 1.5);
     justify-content: space-between;
     form {
         flex: 1;

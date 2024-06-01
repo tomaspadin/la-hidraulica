@@ -21,8 +21,7 @@
     border-radius: $radius;
 }
 
-@mixin font-setup($size, $weight: normal, $line-height: 1.5) {
-    font-size: $size;
+@mixin font-setup($weight: normal, $line-height: 1.5) {
     font-weight: $weight;
     line-height: $line-height;
 }

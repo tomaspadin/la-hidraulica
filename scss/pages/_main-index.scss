@@ -1,46 +1,46 @@
-// Variables
 
 @import "../utilities/variables";
 @import "../utilities/mixins";
-
+@import "../utilities/media-queries";
+@import "../utilities/extends";
 
 
 .main-index {
+    background-color: #000000;
     margin: 0 auto;
     .banner-container {
         position: relative;
-        height: 55vh;
+        height: 45vh;
         overflow: hidden;
-        box-shadow: 0 0 0.rem #000000;
+        box-shadow: 0 0 0.4rem #000000;
         .banner-img {
             width: 100%;
-            height: 55vh;
+            height: 45vh;
             background-color: lightblue;
             display: flex;
             justify-content: center;
             align-items: center;
             object-fit: cover;
         }
-        .quienes {
-            @extend .text-overlay;
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            border-radius: 0.5rem;
-            background: rgba(130, 205, 234, 0.9);
-            color: $white-color;
-            text-align: center;
-            font-weight: bold;
-            text-shadow: 0 0 0.10rem black;
-            box-shadow: 0 0 0.20rem #000000;
-        }
         .text-overlay {
             font-family: 'Poppins', sans-serif;
             position: absolute;
-            top: 15%;
-            left: 5%;
+            top: 50%;
+            left: 25%;
             color: white;
-            font-weight: 500;
-            z-index: 1;
+            font-weight: 600;
+            .quienes {
+                @extend .quienes;
+                display: inline-block;
+                padding: 0.5rem 1rem;
+                border-radius: 0.5rem;
+                background: rgba(130, 205, 234, 0.9);
+                color: $white-color;
+                text-align: center;
+                font-weight: bold;
+                text-shadow: 0 0 0.10rem black;
+                box-shadow: 0 0 0.20rem #000000;
+            }
         }
     }
     .search-form {
@@ -51,7 +51,9 @@
         border-radius: 5px;
         margin: 1rem auto;
         width: 100%;
+        box-shadow: 0 0 0.2rem #000000;
         .search-input {
+            width: 100%;
             padding: 1rem;
             border: 1px solid #cccccc;
             border-radius: 5px;
@@ -69,26 +71,29 @@
         .search-button:hover {
             background-color: #49c2e0;
         }
-        .servicios {
-            padding: $padding;
-            border-radius: $border-radius;
-            h2 {
-                @extend .quienes;
-                padding: 0.5rem 1rem;
-                font-size: $font-size;
-            }
+    }
+    .servicios {
+        color: white;
+        border-radius: $border-radius;
+        h2 {
+            color: white;
+            font-size: 2rem;
+            padding: 0.5rem 1rem;
         }
         p {
-            padding: $padding;
+            padding: 1rem;
             font-family: 'Poppins', sans-serif;
             font-size: $font-size;
-            line-height: 1.6;
+            line-height: 2;
             text-align: justify;
-            color: #333;
-            }
+            color: white;
+        }
     }
+    
     .container1{
         height: 40vh;
+        display: flex;
+        padding-bottom: 1rem;
         .card1 {
             flex: 1;
             position: relative;
@@ -97,28 +102,44 @@
             text-decoration: none;
             margin: 0;
             height: 100%;
+            transition: transform 2s ease-in-out;
+            &.card-left {
+                @extend .card1;
+                transition: transform 1s ease; 
+                &:hover {
+                    transform: scale(1.1);
+                    z-index: 1; 
+                }
+                clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+                transform: translateX(100%);
+            }
+            &.card-right {
+                @extend .card1;
+                transition: transform 1s ease; 
+                &:hover {
+                    transform: scale(1.1); 
+                    z-index: 1; 
+                }
+                clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+                transform: translateX(-100%);
+            }
+            &.animate {
+                transform: translateX(0);
+            }
             img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
             }
-            &.card-left {
-                @extend .card1;
-                clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
-            }
-            &.card-right {
-                @extend .card1;
-                clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
-            }
             .text-bubble1 {
                 @extend .text-overlay;
                 top: 20%;
-                font-size: $font-size;
+                font-size: 2rem;
             }
             .text-bubble2 {
                 @extend .text-overlay;
                 top: 80%;
-                font-size: $font-size;
+                font-size: 2rem;
             }
         }
     }
@@ -126,88 +147,43 @@
         display: flex;
         justify-content: center;
         background-color: black;
-        padding: 1rem;
+        padding: 1.5rem;
         border-radius: 5px;
         .video-item {
-            display: flex;
+            @include flex(row, center, center);
             flex-direction: column;
             align-items: center;
             margin: 0 0.5rem;
+            transition: transform 0.5s ease; // Añade una transición suave
+            &:hover {
+                transform: scale(1.1); // Agranda el video al pasar el cursor
+                z-index: 1; // Asegura que el video agrandado esté por encima de los demás
+            }
             video {
                 max-width: 100%;
                 border-radius: 5px;
                 border: none;
             }
+    
             .label {
-                margin-top: 0.5rem;
+                font-size: $font-size;
+                margin-top: 0.3rem;
+                margin-bottom: 0.5rem;
                 color: white;
                 font-weight: bold;
             }
         }
     }
-    .image-container3 {
-        display: flex;
-        justify-content: center;
-        align-items: center; 
-        background-color: white;
-        height: 30vh;
+    .imagen-container3 {
+        width: 100%;
+        overflow: hidden;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
         .imagen3 {
-            max-width: 100%; 
+            width: 100%; 
             height: auto; 
-        }
-    }
-    .whatsapp-btn {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background-color: #25d366; // Color oficial de WhatsApp
-        color: #fff;
-        border: none;
-        border-radius: 50%;
-        width: 60px;
-        height: 60px;
-        font-size: 24px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        @include box-shadow($box-shadow);
-        transition: transform 0.3s ease-in-out;
-        &:hover {
-            transform: scale(1.1);
-        }
-    }
-    .popup {
-        display: none;
-        position: fixed;
-        bottom: 90px;
-        right: 20px;
-        background-color: $background-color;
-        @include box-shadow($box-shadow);
-        @include border-radius($border-radius);
-        width: 300px;
-        max-width: 90%;
-        z-index: 1000;
-        &.show {
-            display: block;
-        }
-        .popup-content {
-            padding: 20px;
-            text-align: center;
-            .whatsapp-link {
-                display: flex;
-                align-items: center;
-                text-decoration: none;
-                color: $primary-color;
-                .whatsapp-logo {
-                    width: 40px;
-                    height: 40px;
-                    margin-right: 10px;
-                }
-                span {
-                    @include font-setup(16px, bold);
-                }
-            }
+            display: block; 
+            object-fit: cover; 
         }
     }
 }

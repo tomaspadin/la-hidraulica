@@ -1,13 +1,24 @@
-$primary-color: #000000;
-$secondary-color: #8b8787de;
+$primary-color: #0d6efd;
+$secondary-color: #00000079;
+$tertiary-color: #f8f9fa;
+$font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 $font-family: 'Poppins', sans-serif;
+$font-size: large;
 
-$background-color:#000000;
+$background-color: #f8f8f8;
+$box-shadow-color: rgba(0, 0, 0, 0.3);
+$link-color: #333;
+$link-hover-color: #007BFF;
+$border-color: #ccc;
+$text-color: #000;
+
+
+
 $banner-height: 55vh;
 $breakpoints: (
     'desktop': 1024px,
-    'tablet': 767px,
     'mobile': 480px
 );
 $box-shadow: 0 7px 12px rgba(0, 0, 0, 0.4);
 $border-radius: 10px;
+$white-color: #ffffff;

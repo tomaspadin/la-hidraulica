@@ -1,16 +1,20 @@
 @import "./utilities/variables";
 @import "./utilities/globals";
 @import "./utilities/mixins";
+@import "./utilities/extends";
 
 
 
 @import "./pages/main-index";
-@import "./pages/hidraulica";
-@import "./pages/aire-acondicionado";
-@import "./pages/nosotros";
-@import "./pages/contacto";
+@import "./pages/main-hidraulica";
+@import "./pages/main-aire-acondicionado";
+@import "./pages/main-nosotros";
+@import "./pages/main-contacto";
 
 
+
+@import "./components/whatsapp";
+@import "./components/carroucel";
 @import "./components/footer";
 @import "./utilities/media-queries";
 

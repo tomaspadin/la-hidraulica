@@ -1,0 +1,156 @@
+@import "../utilities/variables";
+@import "../utilities/mixins";
+@import "../utilities/media-queries";
+
+.main-hidraulica {
+    background-color: #000000;
+    .carousel-slide {
+        box-shadow: 0 0 0.4rem #000000;
+        &-inner {
+            .carousel-item {
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+        &-control-prev, &-control-next {
+            span {
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+    .navbar {
+        background-color: $primary-color;
+        color: rgb(29, 27, 27);     
+        .navbar-toggler-icon {
+            background-color: rgba(255, 255, 255, 0.101);
+        }
+        .navbar-nav {
+            .nav-item {
+                .dropdown-menu {
+                    background-color: $secondary-color;
+                    .dropdown-item {
+                        color: white;
+                        &:hover {
+                            background-color: black;
+                        }
+                    }
+                }
+            }
+        }
+        .form-control {
+            margin-right: 0.5rem;
+        }
+        .btn-outline-success {
+            color: white;
+            border-color: white;
+            &:hover {
+                background-color: rgb(10, 10, 10);
+                color: $primary-color;
+            }
+        }
+    }
+    .grid-container3 {
+        background-color: black;
+        border-radius: 10px;
+        padding-top: 2rem;
+        padding-bottom: 2%;
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(6, 1fr); 
+        gap: 20px;
+        width: 95%; 
+        margin: 10px auto;
+        .grid-item2 {
+            color: black;
+            background-color: #bab7b7;
+            border-radius: 8px;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            box-shadow: 0 7px 12px rgba(251, 247, 247, 0);
+            overflow: hidden;
+            transition: transform 1s ease; 
+            &:hover {
+                transform: scale(1.2);
+                z-index: 1; 
+            }
+            img {
+                width: 100%;
+                height: 20vh;
+                display: block;
+                object-fit: cover;
+            }
+            &:hover .card-text {
+                opacity: 1;
+            }
+            .card-text {
+                padding: 8px;
+                font-size: 20px;
+            }
+        }
+        .grid-item3 {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 7px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 1s ease; 
+            &:hover {
+                transform: scale(1.1);
+                z-index: 1; 
+            }
+            img {
+                width: 100%;
+                height: 16vh;
+                display: block;
+                object-fit: cover;
+            }
+        }
+    }
+    .servicios {
+        color: rgba(240, 248, 255, 0);
+        margin-top: 2rem;
+        h2 {
+            text-align: left;
+            color: white;
+            margin-bottom: 1rem;
+            margin-left: 1rem;
+        }
+    }
+    .container2 {
+        margin-top: 1rem;        
+        .flex-container2 {
+            @include flex(row, center, center);
+            @include font-setup($weight: normal, $line-height: 1.5);
+            .paragraph-bubble {
+                padding: 1rem;
+                background-color: black;
+                font-size: 1.5rem;
+                color: white;
+                border-radius: 10px;
+                margin-right: 1rem;
+                line-height: 1.5;
+            }
+            .video-item {
+                @include flex(row, center, center);
+                color: white;
+                flex-direction: column;
+                align-items: center;
+                margin: 0 1rem;
+                video {
+                    max-width: 100%;
+                    border-radius: 5px;
+                    border: none;
+                }
+                .label {
+                    padding-bottom: 1rem;
+                    text-align: center;
+                    font-size: medium;
+                }
+            }
+        }
+    }
+}
+

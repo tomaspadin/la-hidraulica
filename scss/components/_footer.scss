@@ -1,10 +1,7 @@
 // Variables
-$background-color: #f8f8f8;
-$box-shadow-color: rgba(0, 0, 0, 0.3);
-$link-color: #333;
-$link-hover-color: #007BFF;
-$border-color: #ccc;
-$text-color: #000;
+
+@import "../utilities/media-queries";
+@import "../utilities/variables";
 
 a {
     color: $link-color;
@@ -17,6 +14,7 @@ a {
 footer {
     background-color: $background-color;
     padding: 20px;
+    font-size: large;
     box-shadow: 0 -2px 5px $box-shadow-color;
     .footer-container {
         display: flex;

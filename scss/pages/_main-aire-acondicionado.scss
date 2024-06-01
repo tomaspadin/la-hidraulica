@@ -1,11 +1,12 @@
 @import "../utilities/variables";
 @import "../utilities/mixins";
+@import "../utilities/media-queries";
 
-// Main Container
+
 .main-aire-acondicionado {
-    // Carousel
+    background-color: #000000;
     .carousel-slide {
-        height: 50vh;
+        box-shadow: 0 0 0.4rem #000000;
         &-inner {
             .carousel-item {
                 img {
@@ -20,12 +21,7 @@
             }
         }
     }
-    // Navbar
-    .navbar {
-        color: white;     
-        .navbar-toggler-icon {
-            background-color: black;
-        }
+    .navbar {    
         .navbar-nav {
             .nav-item {
                 .dropdown-menu {
@@ -53,33 +49,46 @@
     }
     // Grid Containers
     .grid-container2 {
-        background-color: #ffffff;
+        background-color: black;
         border-radius: 10px;
         padding-bottom: 2%;
         display: grid;
         align-items: center;
         grid-template-columns: repeat(6, 1fr);
-        gap: 10px;
+        gap: 20px;
         width: 95%;
-        margin: 10px auto;
+        margin: 20px auto;
+
         .grid-item2 {
-            background-color: #fff;
+            color: black;
+            background-color: #bab7b7;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 7px 12px rgba(0, 0, 0, 0.1);
             text-align: center;
+            transition: transform 0.5s ease; 
+            &:hover {
+                transform: scale(1.2); 
+                z-index: 1; 
+            }
             img {
                 width: 100%;
-                height: auto;
+                height: 20vh;
                 display: block;
+                object-fit: cover;
             }
             .card-text {
                 padding: 8px;
+                height: 8vh;
                 font-size: 20px;
             }
         }
     }
     .grid-container1 {
+        background-color: #ffffff;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border-radius: 8px;
         @include flex(row, center, center);
         .grid-item {
             @include flex(row, center, center);
@@ -87,6 +96,11 @@
             height: 100%;
             text-align: center;
             overflow: hidden;
+            transition: transform 0.5s ease; 
+            &:hover {
+                transform: scale(1.2); 
+                z-index: 1; 
+            }
             img {
                 width: 100%;
                 height: auto;
@@ -100,19 +114,21 @@
     // Servicios
     .servicios {
         margin-top: 2rem;
+        color: white;
         h2 {
-            text-align: center;
+            text-align: left;
+            padding-left: 1rem;
             margin-bottom: 1rem;
         }
     }
     // Container
     .container2 {
+        
         margin-top: 1rem;        
         .flex-container2 {
             @include flex(row, center, center);
-            @include font-setup($size, $weight: normal, $line-height: 1.5);
+            @include font-setup($weight: normal, $line-height: 1.5);
             .paragraph-bubble {
-                font-size: large;
                 padding: 1rem;
                 background-color: black;
                 color: white;

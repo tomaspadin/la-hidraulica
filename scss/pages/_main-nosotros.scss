@@ -1,0 +1,74 @@
+@import "../utilities/variables";
+@import "../utilities/mixins";
+@import "../utilities/media-queries";
+
+body {
+  font-family: $font-stack;
+  background-color: $tertiary-color;
+  margin: 0;
+  padding: 0;
+  background-size: cover; // Ajusta la imagen para que cubra todo el fondo
+  background-repeat: no-repeat;
+  background-attachment: fixed; // Mantiene la imagen fija al hacer scroll
+  background-position: center;
+}
+
+.main-nosotros {
+  width: 95%;
+  padding-top: 2rem;
+  .burbuja-parrafo {
+    background-color: rgba(0, 0, 0, 0.85); // Fondo negro con transparencia
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgb(0, 0, 0);
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: transform 1s ease; 
+    &:hover {
+        transform: scale(1.05);
+        z-index: 1; 
+    }
+    h1, h2 {
+      color: white;
+    }
+    .parrafo {
+      color: #ffffff; // Texto blanco
+    }
+  }
+  .container3 {
+    @include flex(row, center, center);
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 2rem;
+    .bubble {
+      background-color: rgba(0, 0, 0, 0.7); // Fondo negro con transparencia
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgb(0, 0, 0);
+      flex: 1 1 calc(50% - 20px);
+      padding: 20px;
+      transition: transform 1s ease; 
+      &:hover {
+          transform: scale(1.05);
+          z-index: 1; 
+      }
+      p {
+        color: #ffffff; // Texto blanco
+      }
+    }
+  }
+  .carrucel-nosotros {
+    box-shadow: 0 4px 4px rgb(0, 0, 0);
+    background-color: white;
+    .carousel {
+      .carousel-item {
+        img {
+          max-height: 500px;
+          object-fit: cover;
+        }
+      }
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        filter: invert(1);
+      }
+    }
+  }
+}

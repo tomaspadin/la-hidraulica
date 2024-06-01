@@ -1,0 +1,55 @@
+.carousel-container1 {
+    width: 100%;
+    overflow: hidden;
+    background-color: #000; // Fondo negro para el contenedor del carrusel
+}
+
+.carousel1 {
+    display: flex;
+    animation: scroll 30s linear infinite;
+    width: 100%; // Ajusta esto según la cantidad de imágenes para asegurar que el bucle sea continuo
+    .card1 {
+        width: 25%; // Mostrar 4 imágenes a la vez en pantallas grandes
+        flex-shrink: 0;
+        margin: 10px;
+        background-color: #3a3939; // Fondo gris oscuro para las cards
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+        text-align: center;
+        transition: transform 1s ease; 
+        &:hover {
+            transform: scale(1.05); 
+            z-index: 1; 
+        }
+        img {
+            width: 100%;
+            height: 30vh;
+            display: block;
+            object-fit: cover; 
+        }
+        p {
+            margin: 10px 0;
+            color: #fff; // Texto blanco
+        }
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+@media screen and (max-width: 767px) {
+    .carousel1 {
+        .card1 {
+            width: 75%; 
+            img {
+                height: 20vh;
+            }
+        }
+    }
+}
