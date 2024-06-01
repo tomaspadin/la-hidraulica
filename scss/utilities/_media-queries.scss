@@ -1,8 +1,5 @@
 
 @media (max-width: 767px) {
-    .imagen3 {
-        display: none; 
-    }
     // Index
     .text-overlay {
         top: 50%;
@@ -144,6 +141,16 @@
     }
     // Nosotros
     .main-nosotros {
+        .burbuja-parrafo {
+            .content {
+                @include flex(column, center, center);
+                .parrafo {
+                    .imagen-trapezoidal {
+                        display: none;
+                    }
+                }
+            }
+        }
         .container3 {
             flex-direction: column; // Apila los elementos en columna
             align-items: stretch; // Ajusta el ancho de los elementos al contenedor

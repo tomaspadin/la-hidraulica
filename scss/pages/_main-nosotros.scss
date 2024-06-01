@@ -14,7 +14,6 @@ body {
 }
 
 .main-nosotros {
-  width: 95%;
   padding-top: 2rem;
   .burbuja-parrafo {
     background-color: rgba(0, 0, 0, 0.85); // Fondo negro con transparencia
@@ -22,16 +21,23 @@ body {
     box-shadow: 0 2px 4px rgb(0, 0, 0);
     margin-bottom: 20px;
     padding: 20px;
-    transition: transform 1s ease; 
-    &:hover {
-        transform: scale(1.05);
-        z-index: 1; 
-    }
     h1, h2 {
       color: white;
     }
-    .parrafo {
-      color: #ffffff; // Texto blanco
+    .content {
+      @include flex(row, center, center);
+      align-items: center;
+      justify-content: space-between;
+      .parrafo {
+        flex: 1;
+        color: #ffffff;
+        font-size: 1.6rem;
+        margin-right: 20px;  
+        .imagen-trapezoidal {
+          border-radius: 5px;
+          box-shadow: 0 2px 4px rgb(0, 0, 0);
+      }
+      }
     }
   }
   .container3 {
@@ -45,11 +51,6 @@ body {
       box-shadow: 0 2px 4px rgb(0, 0, 0);
       flex: 1 1 calc(50% - 20px);
       padding: 20px;
-      transition: transform 1s ease; 
-      &:hover {
-          transform: scale(1.05);
-          z-index: 1; 
-      }
       p {
         color: #ffffff; // Texto blanco
       }

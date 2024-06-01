@@ -10,7 +10,6 @@
             .carousel-item {
                 img {
                     width: 100%;
-                    height: auto;
                 }
             }
         }
@@ -32,8 +31,10 @@
                     background-color: $secondary-color;
                     .dropdown-item {
                         color: white;
+                        font-size: $font-size;
+                        text-align: center;
                         &:hover {
-                            background-color: black;
+                            background-color: rgba(114, 189, 235, 0.845);
                         }
                     }
                 }
