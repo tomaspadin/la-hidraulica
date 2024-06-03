@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,8 +15,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- top bar con datos -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <div>
+                    <span>📞 +54 234 567 890</span>
+                    <span>📧 lahidraulica@ejemplo.com</span>
+                </div>
+                <div>
+                    <span>📍 Intendente Zobboli 172, Rafaela, Argentina</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header -->
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <!-- menu nav bootstrap -->
+        <nav id="navbar" class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a href="./index.html">
                     <img class="navbar-brand" src="./assets/img/logo.jpg" alt="Logo Hidraulica">
@@ -28,21 +43,21 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link active" href="./index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="./pages/hidraulica.html">Hidraulica</a>
+                            <a class="nav-link" href="./pages/hidraulica.html">Hidraulica</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="./pages/aire-acondicionado.html">Aire Acondicionado</a>
+                            <a class="nav-link" href="./pages/aire-acondicionado.html">Aire Acondicionado</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="./pages/nosotros.html">Nosotros</a>
+                            <a class="nav-link" href="./pages/nosotros.html">Nosotros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="./pages/contacto.html">Contacto</a>
+                            <a class="nav-link" href="./pages/contacto.html">Contacto</a>
                         </li>
                     </ul>
                 </div>
@@ -50,6 +65,7 @@
         </nav>
     </header>
     <main class="main-index">
+        <!-- banner -->
         <section>
             <div class="banner-container position-relative">
                 <div class="text-overlay position-absolute">
@@ -60,10 +76,12 @@
                 <img src="./assets/img/banner.jpg" alt="Banner de La Hidráulica" class="banner-img">
             </div>
         </section>
+        <!-- búsqueda -->
         <form class="search-form" role="search">
             <input class="search-input" type="search" placeholder="Código o descripción" aria-label="Search">
             <button class="search-button" type="submit">Buscar</button>
         </form>
+        <!-- primer carrucel -->
         <div class="servicios">
             <h2>NUEVOS PRODUCTOS</h2>
         </div>
@@ -98,11 +116,13 @@
                 </div>
             </div>
         </div>
+        <!-- textos -->
         <div class="servicios">
             <h2>NUESTROS RUBROS</h2>
             <p>Explora nuestra selección líder en equipos hidráulicos y aire acondicionado. Calidad, rendimiento y
                 confort asegurados. Confía en nosotros para soluciones confiables y duraderas. ¡Haz tu pedido hoy!</p>
         </div>
+        <!-- cards animadas -->
         <div class="container1">
             <a class="card1 card-left" href="./pages/hidraulica.html">
                 <img src="./assets/img/hidraulicos.jpg" alt="Imagen de equipos hidráulicos">
@@ -115,6 +135,7 @@
                 </div>
             </a>
         </div>
+        <!-- textos -->
         <section class="servicios">
             <h2>NUESTROS SERVICIOS</h2>
             <p>Somos líderes en reparación de equipos hidráulicos y de aire acondicionado. Con una amplia experiencia y
@@ -122,6 +143,7 @@
                 mantener sus equipos en óptimas condiciones y disfrutar de un ambiente cómodo y seguro en todo momento.
             </p>
         </section>
+        <!-- videos -->
         <section>
             <div class="videos-container">
                 <div class="video-item">
@@ -153,17 +175,19 @@
                 </div>
             </div>
         </section>
+        <!-- popup de whatsapp -->
         <button id="whatsappBtn" class="whatsapp-btn" onclick="togglePopup()">💬</button>
         <div id="whatsappPopup" class="popup">
             <div class="popup-content">
                 <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-link">
                     <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="Logo de WhatsApp"
                         class="whatsapp-logo">
-                    <span>Enviar mensaje</span>
+                    <span>Contáctenos</span>
                 </a>
             </div>
         </div>
     </main>
+    <!-- footer -->
     <footer>
         <div class="footer-container">
             <div class="footer-section">

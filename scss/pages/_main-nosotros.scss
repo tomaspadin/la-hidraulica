@@ -3,10 +3,6 @@
 @import "../utilities/media-queries";
 
 body {
-  font-family: $font-stack;
-  background-color: $tertiary-color;
-  margin: 0;
-  padding: 0;
   background-size: cover; 
   background-repeat: no-repeat;
   background-attachment: fixed; 
@@ -16,12 +12,15 @@ body {
 // estilo
 .main-nosotros {
   padding-top: 2rem;
+  padding-left: 10%;
+  padding-right: 10%;
   .burbuja-parrafo {
-    background-color: rgba(0, 0, 0, 0.85); 
+    padding-left: 1%;
+    padding-right: 1%;
+    background-color: rgba(0, 0, 0, 0.80); 
     border-radius: 10px;
     box-shadow: 0 2px 4px rgb(0, 0, 0);
     margin-bottom: 20px;
-    padding: 20px;
     h1, h2 {
       color: white;
     }
@@ -48,7 +47,7 @@ body {
     gap: 20px;
     padding-bottom: 2rem;
     .bubble {
-      background-color: rgba(0, 0, 0, 0.7); 
+      background-color: rgba(0, 0, 0, 0.80); 
       border-radius: 10px;
       box-shadow: 0 2px 4px rgb(0, 0, 0);
       flex: 1 1 calc(50% - 20px);

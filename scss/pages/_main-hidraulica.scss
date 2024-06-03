@@ -4,19 +4,22 @@
 
 .main-hidraulica {
     background-color: $background-color;
-    .carousel-slide {
-        box-shadow: 0 0 0.4rem #000000;
-        &-inner {
-            .carousel-item {
-                img {
-                    width: 100%;
-                }
-            }
+    .carousel {
+        border-bottom: 5px solid #333; // Borde inferior oscuro del carrusel
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.7); // Burbujas negras translúcidas
+            padding: 15px;
+            border-radius: 10px;
         }
-        &-control-prev, &-control-next {
-            span {
-                background-color: rgba(0, 0, 0, 0.5);
-            }
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: black; // Fondo negro para las flechas
+            border-radius: 50%;
+            padding: 20px; // Aumenta el tamaño de las flechas
+        }
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 5%; // Ajusta el área de clic para las flechas
         }
     }
     // menu
@@ -75,6 +78,7 @@
             box-shadow: 0 7px 12px rgba(251, 247, 247, 0);
             overflow: hidden;
             transition: transform 1s ease; 
+            border: 2px solid black;
             &:hover {
                 transform: scale(1.1);
                 z-index: 1; 
