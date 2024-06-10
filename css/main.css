@@ -113,6 +113,9 @@ main {
   .main-hidraulica .navbar .form-control {
     margin-bottom: 0.5rem;
   }
+  .main-hidraulica .navbar .search-form {
+    width: 100%;
+  }
   .main-hidraulica .grid-container3 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -156,6 +159,9 @@ main {
   }
   .main-aire-acondicionado .navbar .form-control {
     margin-bottom: 0.5rem;
+  }
+  .main-aire-acondicionado .navbar .search-form {
+    width: 100%;
   }
   .main-aire-acondicionado .grid-container2 {
     display: grid;
@@ -506,6 +512,9 @@ main {
   .main-hidraulica .navbar .form-control {
     margin-bottom: 0.5rem;
   }
+  .main-hidraulica .navbar .search-form {
+    width: 100%;
+  }
   .main-hidraulica .grid-container3 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -549,6 +558,9 @@ main {
   }
   .main-aire-acondicionado .navbar .form-control {
     margin-bottom: 0.5rem;
+  }
+  .main-aire-acondicionado .navbar .search-form {
+    width: 100%;
   }
   .main-aire-acondicionado .grid-container2 {
     display: grid;
@@ -1115,6 +1127,9 @@ main {
   .main-hidraulica .navbar .form-control {
     margin-bottom: 0.5rem;
   }
+  .main-hidraulica .navbar .search-form {
+    width: 100%;
+  }
   .main-hidraulica .grid-container3 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1158,6 +1173,9 @@ main {
   }
   .main-aire-acondicionado .navbar .form-control {
     margin-bottom: 0.5rem;
+  }
+  .main-aire-acondicionado .navbar .search-form {
+    width: 100%;
   }
   .main-aire-acondicionado .grid-container2 {
     display: grid;
@@ -1732,6 +1750,9 @@ main {
   .main-hidraulica .navbar .form-control {
     margin-bottom: 0.5rem;
   }
+  .main-hidraulica .navbar .search-form {
+    width: 100%;
+  }
   .main-hidraulica .grid-container3 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1775,6 +1796,9 @@ main {
   }
   .main-aire-acondicionado .navbar .form-control {
     margin-bottom: 0.5rem;
+  }
+  .main-aire-acondicionado .navbar .search-form {
+    width: 100%;
   }
   .main-aire-acondicionado .grid-container2 {
     display: grid;
@@ -2357,6 +2381,9 @@ main {
   .main-hidraulica .navbar .form-control {
     margin-bottom: 0.5rem;
   }
+  .main-hidraulica .navbar .search-form {
+    width: 100%;
+  }
   .main-hidraulica .grid-container3 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -2400,6 +2427,9 @@ main {
   }
   .main-aire-acondicionado .navbar .form-control {
     margin-bottom: 0.5rem;
+  }
+  .main-aire-acondicionado .navbar .search-form {
+    width: 100%;
   }
   .main-aire-acondicionado .grid-container2 {
     display: grid;
@@ -2848,6 +2878,9 @@ body {
   .main-hidraulica .navbar .form-control {
     margin-bottom: 0.5rem;
   }
+  .main-hidraulica .navbar .search-form {
+    width: 100%;
+  }
   .main-hidraulica .grid-container3 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -2891,6 +2924,9 @@ body {
   }
   .main-aire-acondicionado .navbar .form-control {
     margin-bottom: 0.5rem;
+  }
+  .main-aire-acondicionado .navbar .search-form {
+    width: 100%;
   }
   .main-aire-acondicionado .grid-container2 {
     display: grid;
@@ -3456,6 +3492,9 @@ body {
   .main-hidraulica .navbar .form-control {
     margin-bottom: 0.5rem;
   }
+  .main-hidraulica .navbar .search-form {
+    width: 100%;
+  }
   .main-hidraulica .grid-container3 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -3499,6 +3538,9 @@ body {
   }
   .main-aire-acondicionado .navbar .form-control {
     margin-bottom: 0.5rem;
+  }
+  .main-aire-acondicionado .navbar .search-form {
+    width: 100%;
   }
   .main-aire-acondicionado .grid-container2 {
     display: grid;
@@ -3890,6 +3932,9 @@ footer .footer-copy p {
   .main-hidraulica .navbar .form-control {
     margin-bottom: 0.5rem;
   }
+  .main-hidraulica .navbar .search-form {
+    width: 100%;
+  }
   .main-hidraulica .grid-container3 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -3933,6 +3978,9 @@ footer .footer-copy p {
   }
   .main-aire-acondicionado .navbar .form-control {
     margin-bottom: 0.5rem;
+  }
+  .main-aire-acondicionado .navbar .search-form {
+    width: 100%;
   }
   .main-aire-acondicionado .grid-container2 {
     display: grid;
