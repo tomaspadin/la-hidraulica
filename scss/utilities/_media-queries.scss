@@ -1,18 +1,31 @@
 
 @media (min-width: 768px) and (max-width: 1200px) {
     .main-index {
-        .text-overlay {
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            .quienes {
-                width: 60%;
+        .videos-container {
+            flex-direction: column;
+            justify-content: center;
+            background-color: $background-color;
+            border-radius: 5px;
+            padding-bottom: 2rem;
+            padding-left: 1rem;
+            .videos-item {
+                flex-direction: column;
             }
         }
     }
     .main-hidraulica {
-        padding: 0.5rem;
+        .navbar {
+            .navbar-nav {
+                text-align: center;
+                width: 100%;
+                .nav-item {
+                    width: 100%;
+                }
+            }
+            .form-control {
+                margin-bottom: 0.5rem;
+            }
+        }
         .grid-container3 {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -20,6 +33,9 @@
             color: black;
             .grid-item2 {
                 padding: 0.5rem;
+                .card-text{
+                    font-size: $font-size;
+                }
             }
         }
         .grid-container4 {
@@ -31,8 +47,7 @@
                 padding: 0.5rem;
             }
         }
-        .container2 {
-            margin-top: 0.5rem;        
+        .container2 {      
             .flex-container2 {
                 flex-direction: column;
                 .paragraph-bubble {
@@ -49,12 +64,12 @@
         }
     }
     .main-aire-acondicionado {
-        padding: 0.5rem;
         .navbar {
             .navbar-nav {
-                flex-direction: column;
+                text-align: center;
+                width: 100%;
                 .nav-item {
-                    margin-bottom: 0.5rem;
+                    width: 100%;
                 }
             }
             .form-control {
@@ -67,62 +82,148 @@
             justify-content: center;
             .grid-item, .grid-item2 {
                 padding: 0.5rem;
+                .card-text{
+                    font-size: $font-size;
+                }
+            }
+        }
+        .grid-container1 {
+            background-color: #ffffff;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            @include flex(row, center, center);
+            .grid-item {
+                @include flex(row, center, center);
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                overflow: hidden;
+                transition: transform 1s ease; 
+                &:hover {
+                    transform: scale(1.05); 
+                    z-index: 1; 
+                }
+                img {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                }
+                &:hover .card-text {
+                    opacity: 1;
+                }
+            }
+        }
+        .container2 {
+            align-items: center;
+            margin-top: 0.5rem;       
+            .flex-container2 {
+                flex-direction: column;
+                .paragraph-bubble {
+                    width: 100%;
+                    padding: 0rem;
+                    font-size: 1.1rem;
+                    color: white;
+                    border-radius: 10px;
+                    margin-right: 0.5rem;
+                    line-height: 1.2;
+                }
+                .aire-container {
+                    padding-left: 15%;
+                    padding-right: 15%;
+                    img {
+                        width: 600px;
+                    }
+                    .video-container {
+                        margin: 0rem 0;
+                        margin: 0.5rem 0;
+                        .video-item {
+                            video {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .main-nosotros {
+        .burbuja-parrafo {
+            padding-left: 2%;
+            padding-right: 2%;
+            .content {
+                @include flex(column, center, center);
+                .parrafo {
+                    font-size: large;
+                }
+                .imagen-trapezoidal {
+                    width: 80%;
+                    height: 80%;
+                }
             }
         }
     }
 }
 
+
 @media (max-width: 767px) {
     // Index
     .main-index {
-        .text-overlay {
-            top: 50%;
-            left: 50%;
-            width: 80%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            .quienes {
-                width: 70%;
+        .banner-container .banner-img {
+            animation-name: zoomInMobile;
+            object-fit: none;
+            .text-overlay1 {
+                width: 80%;
+                text-align: center;
+                transform: translate(-50%, -50%);
+                .quienes {
+                    background-color: #007bff;
+                    color: #fff;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    text-decoration: none;
+                    font-size: 18px;
+                }
             }
         }
-    }
-    .container1 {
-        flex-direction: column;
-        background-color: $background-color;
-        .card1 {
+        .search-form {
             width: 100%;
-            height: auto;
-            &.card-left, &.card-right {
-                transform: translateX(0);
-                clip-path: none;
-            }
-            .text-bubble1, .text-bubble2 {
-                justify-content: center;
-            }
         }
-    }
-    
-    .videos-container {
-        flex-direction: column;
-        justify-content: center;
-        .video-item {
-            width: 100%;
-            margin: 0.5rem 0;
-            video {
+        .container1 {
+            flex-direction: column;
+            background-color: $background-color;
+            .card1 {
                 width: 100%;
+                height: auto;
+                &.card-left, &.card-right {
+                    transform: translateX(0);
+                    clip-path: none;
+                }
+                .text-bubble1, .text-bubble2 {
+                    justify-content: center;
+                }
             }
         }
-    }
-    
-    .servicios {
-        padding: 1rem;
-        h2 {
-            font-size: 1.2rem;
-            padding: 0.5rem;
+        .servicios {
+                    padding: 1rem;
+                h2 {
+                    font-size: 1.2rem;
+                    padding: 0.5rem;
+                }
+            p {
+                font-size: 1rem;
+                line-height: 1.4;
+            }
         }
-        p {
-            font-size: 1rem;
-            line-height: 1.4;
+        .videos-container {
+            flex-direction: column;
+            justify-content: center;
+            background-color: $background-color;
+            border-radius: 5px;
+            padding-bottom: 2rem;
+            padding-left: 1rem;
+            .videos-item {
+                flex-direction: column;
+            }
         }
     }
     // hidraulica
@@ -138,6 +239,10 @@
             .form-control {
                 margin-bottom: 0.5rem;
             }
+        }
+        padding: 0.5rem;
+        .carousel-item img {
+            animation-name: zoomInMobile;
         }
         .grid-container3, .grid-container4 {
             grid-template-columns: 1fr;
@@ -166,6 +271,19 @@
                     margin-right: 0.5rem;
                     line-height: 1.2;
                 }
+                .video-container {
+                    flex-direction: column;
+                    .video-item {
+                        width:auto;
+                        border-radius: 5px;
+                        border: none;
+                        video {
+                            width:90vw;
+                            border-radius: 5px;
+                            border: none;
+                        }
+                    }
+                }
             }
         }
     }
@@ -183,6 +301,9 @@
                 margin-bottom: 0.5rem;
             }
         }
+        .carousel-item img {
+            animation-name: zoomInMobile;
+        }
         .grid-container2 {
             grid-template-columns: 1fr;
             justify-content: center;
@@ -191,18 +312,34 @@
             }
         }
         .container2 {
-            padding-left: 0%;
-            padding-right: 0%;
+            align-items: center;
+            margin-top: 0.5rem;       
             .flex-container2 {
                 flex-direction: column;
                 .paragraph-bubble {
-                    margin-bottom: 0.5rem;
-                    margin-right: 0;
-                    .imagen {
-                        max-width: 320px;
+                    width: 100%;
+                    padding: 0rem;
+                    font-size: 1.1rem;
+                    color: white;
+                    border-radius: 10px;
+                    margin-right: 0.5rem;
+                    line-height: 1.2;
+                }
+                .aire-container {
+                    img {
+                        width: 100%;
+                    }
+                    .video-container {
+                        padding: 0%;
+                        margin: 0rem 0;
+                        margin: 0.5rem 0;
+                        .video-item {
+                            video {
+                                width: 100%;
+                            }
+                        }
                     }
                 }
-                
             }
         }
         .servicios h2 {
@@ -217,13 +354,14 @@
     }
     // Nosotros
     .main-nosotros {
+        width: 96%;
         .burbuja-parrafo {
+            padding-left: 2%;
+            padding-right: 2%;
             .content {
                 @include flex(column, center, center);
                 .parrafo {
-                    .imagen-trapezoidal {
-                        display: none;
-                    }
+                    font-size: large;
                 }
             }
         }
@@ -234,6 +372,9 @@
         .bubble {
             flex: none; 
             width: 100%; 
+        }
+        .carousel-item img {
+            animation-name: zoomInMobile;
         }
     }
     // Contacto

@@ -4,28 +4,55 @@
 
 .main-hidraulica {
     background-color: $background-color;
+    // carroucel
     .carousel {
-        border-bottom: 5px solid #333; // Borde inferior oscuro del carrusel
+        border-bottom: 5px solid #333; 
         .carousel-caption {
-            background-color: rgba(0, 0, 0, 0.7); // Burbujas negras translúcidas
+            background-color: rgba(0, 0, 0, 0.7);
             padding: 15px;
             border-radius: 10px;
         }
         .carousel-control-prev-icon,
         .carousel-control-next-icon {
-            background-color: black; // Fondo negro para las flechas
+            background-color: black; 
             border-radius: 50%;
-            padding: 20px; // Aumenta el tamaño de las flechas
+            padding: 20px; 
         }
         .carousel-control-prev,
         .carousel-control-next {
-            width: 5%; // Ajusta el área de clic para las flechas
+            width: 5%; 
         }
+        .hidden-link {
+            display: none;
+        }
+    }
+    @keyframes zoomInDesktop {
+        0% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(1.05);
+        }
+    }
+    @keyframes zoomInMobile {
+        0% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(1.08);
+        }
+    }
+    .carousel-item img {
+        animation-duration: 10s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-name: zoomInDesktop;
     }
     // menu
     .navbar {
         background-color: $primary-color;
         color: rgb(29, 27, 27);     
+        position: static !important;
         .navbar-toggler-icon {
             background-color: rgba(255, 255, 255, 0.101);
         }
@@ -42,6 +69,33 @@
                         }
                     }
                 }
+            }
+        }
+        .search-form {
+            display: flex;
+            background-color: #000000;
+            align-items: right;
+            justify-content: right;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 0 0.5rem #000000;
+            width: 30vw;
+            .search-input {
+                width: 100%;
+                padding: 0.5rem;
+                border: 1px solid #cccccc;
+                outline: none;
+                font-size: 1rem;
+            }
+            .search-button {
+                padding: 0.5rem;
+                background-color: #b2ebf2;
+                border-radius: 0 8px 8px 0;
+                cursor: pointer;
+                font-size: 1.6rem;
+                transition: background-color 0.3s ease;
+            }
+            .search-button:hover {
+                background-color: #49c2e0;
             }
         }
         .form-control {
@@ -70,6 +124,7 @@
         margin: 10px auto;
         .grid-item2 {
             background-color: #3a3939;
+            padding: 0.5rem;
             color: white;
             border-radius: 8px;
             width: 100%;
@@ -144,37 +199,45 @@
     }
     // contenedor
     .container2 {
-        margin-top: 1rem;     
         padding-left: 10%;
         padding-right: 10%;
         .flex-container2 {
-            @include flex(row, center, center);
-            @include font-setup($weight: normal, $line-height: 1.5);
+            display: flex;
+            text-align: justify;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
             .paragraph-bubble {
+                font-size: 1.6rem;
                 padding: 1rem;
-                width: 70%;
                 background-color: $background-color;
-                font-size: 1.5rem;
                 color: white;
                 border-radius: 10px;
                 margin-right: 1rem;
-                line-height: 1.5;
+                line-height: 1.8;
+                flex: 1 1 50%;
+                box-sizing: border-box;
             }
-            .video-item {
-                @include flex(row, center, center);
-                color: white;
-                flex-direction: column;
-                align-items: center;
-                margin: 0 1rem;
-                video {
-                    max-width: 100%;
-                    border-radius: 5px;
-                    border: none;
-                }
-                .label {
-                    padding-bottom: 1rem;
-                    text-align: center;
-                    font-size: medium;
+            .video-container {
+                display: flex;
+                flex: 1 1 50%;
+                box-sizing: border-box;
+                .video-item {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 1%;
+                    margin: 1rem 0;
+                    color: white;
+                    video {
+                        width:40vw;
+                        border-radius: 5px;
+                        border: none;
+                    }
+                    .label {
+                        padding-top: 0.5rem;
+                        text-align: center;
+                        font-size: 1.3rem;
+                    }
                 }
             }
         }

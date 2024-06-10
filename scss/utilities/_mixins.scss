@@ -13,8 +13,16 @@
     align-items: $align-items;
 }
 
-@mixin box-shadow($shadow) {
-    box-shadow: $shadow;
+@mixin gradient-bg($color1, $color2) {
+    background: linear-gradient(to right, $color1, $color2);
+}
+
+@mixin transition($property: all, $duration: 0.3s, $timing: ease-in-out) {
+    transition: $property $duration $timing;
+}
+
+@mixin box-shadow($x: 0, $y: 0, $blur: 10px, $color: rgba(0, 0, 0, 0.5)) {
+    box-shadow: $x $y $blur $color;
 }
 
 @mixin border-radius($radius) {
@@ -24,4 +32,16 @@
 @mixin font-setup($weight: normal, $line-height: 1.5) {
     font-weight: $weight;
     line-height: $line-height;
+}
+
+@mixin media-query($breakpoint) {
+    @if $breakpoint == "smartphone" {
+        @media (max-width: 767px) {
+            @content;
+        }
+    } @else if $breakpoint == "tablet" {
+        @media (max-width: 1200px) {
+            @content;
+        }
+    }
 }

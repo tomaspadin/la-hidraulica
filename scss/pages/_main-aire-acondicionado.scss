@@ -1,29 +1,63 @@
 @import "../utilities/variables";
 @import "../utilities/mixins";
 @import "../utilities/media-queries";
+@import "../utilities/extends";
 
 
 .main-aire-acondicionado {
     background-color: $background-color;
+    // carroucel
     .carousel {
-        border-bottom: 5px solid #333; // Borde inferior oscuro del carrusel
+        border-bottom: 5px solid #333; 
         .carousel-caption {
-            background-color: rgba(0, 0, 0, 0.7); // Burbujas negras translúcidas
+            background-color: rgba(0, 0, 0, 0.7); 
             padding: 15px;
             border-radius: 10px;
         }
         .carousel-control-prev-icon,
         .carousel-control-next-icon {
-            background-color: black; // Fondo negro para las flechas
+            background-color: black; 
             border-radius: 50%;
-            padding: 20px; // Aumenta el tamaño de las flechas
+            padding: 20px; 
         }
         .carousel-control-prev,
         .carousel-control-next {
-            width: 5%; // Ajusta el área de clic para las flechas
+            width: 5%; 
+        }
+        .hidden-link {
+            display: none;
         }
     }
-    .navbar {    
+    @keyframes zoomInDesktop {
+        0% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(1.15);
+        }
+    }
+    @keyframes zoomInMobile {
+        0% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(1.05);
+        }
+    }
+    .carousel-item img {
+        animation-duration: 10s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-name: zoomInDesktop;
+    }
+    // menu de categorias
+    .navbar {
+        background-color: $primary-color;
+        color: rgb(29, 27, 27);     
+        position: static !important;
+        .navbar-toggler-icon {
+            background-color: rgba(255, 255, 255, 0.101);
+        }
         .navbar-nav {
             .nav-item {
                 .dropdown-menu {
@@ -39,6 +73,33 @@
                 }
             }
         }
+        .search-form {
+            display: flex;
+            background-color: #000000;
+            align-items: right;
+            justify-content: right;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 0 0.5rem #000000;
+            width: 30vw;
+            .search-input {
+                width: 100%;
+                padding: 0.5rem;
+                border: 1px solid #cccccc;
+                outline: none;
+                font-size: 1rem;
+            }
+            .search-button {
+                padding: 0.5rem;
+                background-color: #b2ebf2;
+                border-radius: 0 8px 8px 0;
+                cursor: pointer;
+                font-size: 1.6rem;
+                transition: background-color 0.3s ease;
+            }
+            .search-button:hover {
+                background-color: #49c2e0;
+            }
+        }
         .form-control {
             margin-right: 0.5rem;
         }
@@ -46,7 +107,7 @@
             color: white;
             border-color: white;
             &:hover {
-                background-color: white;
+                background-color: rgb(10, 10, 10);
                 color: $primary-color;
             }
         }
@@ -70,7 +131,7 @@
             box-shadow: 0 7px 12px rgba(0, 0, 0, 0.1);
             text-align: center;
             transition: transform 0.5s ease; 
-            border: 2px solid black;
+            border: 2px solid rgb(206, 175, 175);
             &:hover {
                 transform: scale(1.1); 
                 z-index: 1; 
@@ -92,7 +153,6 @@
         background-color: #ffffff;
         padding-top: 1rem;
         padding-bottom: 1rem;
-        border-radius: 8px;
         @include flex(row, center, center);
         .grid-item {
             @include flex(row, center, center);
@@ -100,9 +160,9 @@
             height: 100%;
             text-align: center;
             overflow: hidden;
-            transition: transform 0.5s ease; 
+            transition: transform 1s ease; 
             &:hover {
-                transform: scale(1.1); 
+                transform: scale(1.05); 
                 z-index: 1; 
             }
             img {
@@ -117,37 +177,64 @@
     }
     // textos
     .servicios {
+        color: rgba(240, 248, 255, 0);
         margin-top: 2rem;
-        color: white;
         padding-left: 10%;
         padding-right: 10%;
         h2 {
             text-align: left;
-            padding-left: 1rem;
+            font-size: 2rem;
+            color: white;
             margin-bottom: 1rem;
+            margin-left: 1rem;
         }
     }
     // contenedor 
     .container2 {
         padding-left: 10%;
         padding-right: 10%;
-        margin-top: 1rem;        
+        margin-top: 1rem;
         .flex-container2 {
-            @include flex(row, center, center);
-            @include font-setup($weight: normal, $line-height: 1.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
             .paragraph-bubble {
-                padding: 1rem;
+                font-size: 1.5rem;
+                text-align: start;
                 background-color: $background-color;
                 color: white;
                 border-radius: 10px;
                 margin-right: 1rem;
                 line-height: 1.5;
+                flex: 1 1 50%;
+                box-sizing: border-box;
             }
-            .imagen {
-                max-width: 500px;
-                height: auto;
-                padding-right: 1rem;
-                padding-left: 1rem;
+            .aire-container {
+                img {
+                    border-radius: $border-radius;
+                }
+                .video-container {
+                    display: flex;
+                    flex: 1 1 50%;
+                    box-sizing: border-box;
+                    .video-item {
+                        display: flex;
+                        flex-direction: column;
+                        margin: 1rem 0;
+                        color: white;
+                        video {
+                            border-radius: $border-radius;
+                            box-shadow: $box-shadow;
+                            width: 500px;;
+                            border: none;
+                        }
+                        .label {
+                            padding-top: 0.5rem;
+                            text-align: center;
+                            font-size: medium;
+                        }
+                    }
+                }
             }
         }
     }

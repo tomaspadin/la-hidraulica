@@ -4,76 +4,104 @@
 @import "../utilities/media-queries";
 @import "../utilities/extends";
 
+@import "../utilities/variables";
+@import "../utilities/mixins";
+@import "../utilities/media-queries";
+@import "../utilities/extends";
+
 
 .main-index {
     background-color: $background-color;
     margin: 0 auto;
     // banner
     .banner-container {
-        position: relative;
-        height: 45vh;
-        overflow: hidden;
-        box-shadow: 0 0 0.4rem #000000;
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
         .banner-img {
-            width: 100%;
-            height: 45vh;
-            background-color: lightblue;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            object-fit: cover;
-        }
-        .text-overlay {
-            @extend .text-overlay;
-            font-family: 'Poppins', sans-serif;
             position: absolute;
-            top: 50%;
-            left: 25%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0; 
+        }
+        .text-overlay1 {
+            background-color: rgba(0, 0, 0, 0.8); 
+            padding: 10px;
+            box-shadow: $box-shadow;
+            border-radius: $border-radius;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            position: absolute;
             color: white;
-            font-weight: 600;
+            font-weight: 650;
+            z-index: 1; 
             .quienes {
                 display: inline-block;
+                font-size: 1.5rem;
                 padding: 0.5rem 1rem;
                 border-radius: 0.5rem;
                 background: rgba(130, 205, 234, 0.9);
-                color: $white-color;
+                color: white;
                 text-align: center;
                 font-weight: bold;
                 text-shadow: 0 0 0.20rem black;
                 box-shadow: 0 0 0.20rem #000000;
-                transition: transform 0.5s ease; 
+                transition: transform 0.5s ease;
                 &:hover {
-                    transform: scale(1.05); 
-                    z-index: 1; 
+                    transform: scale(1.05);
+                    z-index: 2; 
                 }
             }
+        }
+    }
+    @keyframes zoomInDesktop {
+        0% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(1.1);
+        }
+    }
+    @keyframes zoomInMobile {
+        0% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(1.05);
         }
     }
     // boton de busqueda
     .search-form {
         display: flex;
-        background-color: #000000;
         align-items: center;
         justify-content: right;
+        border-radius: 0 8px 8px 0;
         padding: 0.5rem;
         border-radius: 5px;
         margin: 1rem auto;
-        width: 80%;
-        box-shadow: 0 0 0.8rem #000000;
+        width: 70%;
         .search-input {
             width: 100%;
-            padding: 1rem;
+            padding: 0.5rem;
+            border-radius: 8px 0 0 8px;
             border: 1px solid #cccccc;
-            border-radius: 5px;
             outline: none;
-            font-size: 1rem;
+            font-size: 1.5rem;
+            box-shadow: $box-shadow;
         }
         .search-button {
             padding: 0.5rem;
             background-color: #b2ebf2;
             border-radius: 0 8px 8px 0;
             cursor: pointer;
-            font-size: 1.6rem;
+            font-size: 1.5rem;
+            box-shadow: $box-shadow;
             transition: background-color 0.3s ease;
         }
         .search-button:hover {
@@ -100,7 +128,7 @@
         p {
             padding: 1rem;
             font-family: 'Poppins', sans-serif;
-            font-size: 1.2rem;
+            font-size: 1.6rem;
             line-height: 2;
             text-align: justify;
             color: white;
@@ -108,7 +136,7 @@
     }
     // cards animadas
     .container1{
-        height: 40vh;
+        height: 30vh;
         padding-left: 5%;
         padding-right: 5%;
         display: flex;
@@ -166,10 +194,9 @@
     // videos
     .videos-container {
         @include flex(row, center, center);
+        background-color: #000000;
         justify-content: center;
-        background-color: $background-color;
         border-radius: 5px;
-        padding-bottom: 2rem;
         padding-left: 1rem;
         .video-item {
             @include flex(row, center, center);
@@ -187,7 +214,8 @@
                 border: none;
             }
             .label {
-                font-size: $font-size;
+                font-size: 1rem;
+                text-align: center;
                 margin-top: 0.3rem;
                 margin-bottom: 0.5rem;
                 color: white;

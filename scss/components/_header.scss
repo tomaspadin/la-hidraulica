@@ -36,6 +36,20 @@
         }
     }
 }
+@media (min-width: 768px) and (max-width: 1200px) {
+.top-bar {
+    display: none;
+}
+.navbar-nav {
+    text-align: center;
+    width: 80%;
+    .nav-item {
+        width: 80%;
+    }
+}
+}   
+
+
 @media screen and (max-width: 767px) {
     .top-bar {
         display: none;
