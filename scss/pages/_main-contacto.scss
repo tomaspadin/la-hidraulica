@@ -17,8 +17,8 @@
         font-size: 3rem;
     }
 }
-
 .contacto {
+    // estilo formulario
     padding-top: 5%;
     @include flex(row, center, center);
     @include font-setup($weight: normal, $line-height: 1.5);

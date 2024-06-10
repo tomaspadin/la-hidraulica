@@ -1,9 +1,11 @@
+// imports utilities
 @import "./utilities/globals";
 @import "./utilities/variables";
 @import "./utilities/mixins";
 @import "./utilities/extends";
+@import "./utilities/media-queries";
 
-
+// imports de pages
 @import "./components/header";
 @import "./pages/main-index";
 @import "./pages/main-hidraulica";
@@ -11,11 +13,10 @@
 @import "./pages/main-nosotros";
 @import "./pages/main-contacto";
 
-
-
+// imports components
 @import "./components/whatsapp";
 @import "./components/carroucel";
 @import "./components/footer";
-@import "./utilities/media-queries";
+
 
 

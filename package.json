@@ -1,14 +1,18 @@
 {
-  "name": "preentrega2padin",
+  "name": "pfpadin",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "build-css": "sass --watch scss/main.scss:css/main.css"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "hidraulica",
+    "aire acondicionado",
+    "reparaciones"
+  ],
+  "author": "tomas padin",
   "license": "ISC",
-  "description": "",
+  "description": "Ofrecemos soluciones en hidráulica y aire acondicionado",
   "devDependencies": {
     "nodemon": "^3.1.0"
   }

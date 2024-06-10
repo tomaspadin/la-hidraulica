@@ -17,6 +17,7 @@ main {
   margin: 0 auto;
 }
 
+/* extend burbuja texto */
 .text-overlay, .main-index .container1 .card1 .text-bubble2, .main-index .container1 .card1 .text-bubble1 {
   position: absolute;
   top: 50%;
@@ -28,6 +29,394 @@ main {
   border-radius: 0.5rem;
 }
 
+@media (min-width: 768px) and (max-width: 1200px) {
+  .main-index .videos-container {
+    flex-direction: column;
+    justify-content: center;
+    background-color: #1c1c1c;
+    border-radius: 5px;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+  }
+  .main-index .videos-container .videos-item {
+    flex-direction: column;
+  }
+  .main-hidraulica .navbar .navbar-nav {
+    text-align: center;
+    width: 100%;
+  }
+  .main-hidraulica .navbar .navbar-nav .nav-item {
+    width: 100%;
+  }
+  .main-hidraulica .navbar .form-control {
+    margin-bottom: 0.5rem;
+  }
+  .main-hidraulica .navbar .search-form {
+    width: 100%;
+  }
+  .main-hidraulica .grid-container3 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    color: black;
+  }
+  .main-hidraulica .grid-container3 .grid-item2 {
+    padding: 0.5rem;
+  }
+  .main-hidraulica .grid-container3 .grid-item2 .card-text {
+    font-size: large;
+  }
+  .main-hidraulica .grid-container4 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    color: black;
+  }
+  .main-hidraulica .grid-container4 .grid-item2 {
+    padding: 0.5rem;
+  }
+  .main-hidraulica .container2 .flex-container2 {
+    flex-direction: column;
+  }
+  .main-hidraulica .container2 .flex-container2 .paragraph-bubble {
+    background-color: #1c1c1c;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    color: white;
+    border-radius: 10px;
+    margin-right: 0.5rem;
+    line-height: 1.2;
+  }
+  .main-aire-acondicionado .navbar .navbar-nav {
+    text-align: center;
+    width: 100%;
+  }
+  .main-aire-acondicionado .navbar .navbar-nav .nav-item {
+    width: 100%;
+  }
+  .main-aire-acondicionado .navbar .form-control {
+    margin-bottom: 0.5rem;
+  }
+  .main-aire-acondicionado .navbar .search-form {
+    width: 100%;
+  }
+  .main-aire-acondicionado .grid-container2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+  }
+  .main-aire-acondicionado .grid-container2 .grid-item, .main-aire-acondicionado .grid-container2 .grid-item2 {
+    padding: 0.5rem;
+  }
+  .main-aire-acondicionado .grid-container2 .grid-item .card-text, .main-aire-acondicionado .grid-container2 .grid-item2 .card-text {
+    font-size: large;
+  }
+  .main-aire-acondicionado .grid-container1 {
+    background-color: #ffffff;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .main-aire-acondicionado .grid-container1 .grid-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 1s ease;
+  }
+  .main-aire-acondicionado .grid-container1 .grid-item:hover {
+    transform: scale(1.05);
+    z-index: 1;
+  }
+  .main-aire-acondicionado .grid-container1 .grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .main-aire-acondicionado .grid-container1 .grid-item:hover .card-text {
+    opacity: 1;
+  }
+  .main-aire-acondicionado .container2 {
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+  .main-aire-acondicionado .container2 .flex-container2 {
+    flex-direction: column;
+  }
+  .main-aire-acondicionado .container2 .flex-container2 .paragraph-bubble {
+    width: 100%;
+    padding: 0rem;
+    font-size: 1.1rem;
+    color: white;
+    border-radius: 10px;
+    margin-right: 0.5rem;
+    line-height: 1.2;
+  }
+  .main-aire-acondicionado .container2 .flex-container2 .aire-container {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+  .main-aire-acondicionado .container2 .flex-container2 .aire-container img {
+    width: 600px;
+  }
+  .main-aire-acondicionado .container2 .flex-container2 .aire-container .video-container {
+    margin: 0rem 0;
+    margin: 0.5rem 0;
+  }
+  .main-aire-acondicionado .container2 .flex-container2 .aire-container .video-container .video-item video {
+    width: 100%;
+  }
+  .main-nosotros .burbuja-parrafo {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .main-nosotros .burbuja-parrafo .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .main-nosotros .burbuja-parrafo .content .parrafo {
+    font-size: large;
+  }
+  .main-nosotros .burbuja-parrafo .content .imagen-trapezoidal {
+    width: 80%;
+    height: 80%;
+  }
+}
+@media (max-width: 767px) {
+  .main-index .banner-container .banner-img {
+    animation-name: zoomInMobile;
+    -o-object-fit: none;
+       object-fit: none;
+  }
+  .main-index .banner-container .banner-img .text-overlay1 {
+    width: 80%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+  .main-index .banner-container .banner-img .text-overlay1 .quienes {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  .main-index .search-form {
+    width: 100%;
+  }
+  .main-index .container1 {
+    flex-direction: column;
+    background-color: #1c1c1c;
+  }
+  .main-index .container1 .card1, .main-index .container1 .card1.card-right, .main-index .container1 .card1.card-left {
+    width: 100%;
+    height: auto;
+  }
+  .main-index .container1 .card1.card-left, .main-index .container1 .card1.card-right {
+    transform: translateX(0);
+    -webkit-clip-path: none;
+            clip-path: none;
+  }
+  .main-index .container1 .card1 .text-bubble1, .main-index .container1 .card1 .text-bubble2 {
+    justify-content: center;
+  }
+  .main-index .servicios {
+    padding: 1rem;
+  }
+  .main-index .servicios h2 {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+  .main-index .servicios p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  .main-index .videos-container {
+    flex-direction: column;
+    justify-content: center;
+    background-color: #1c1c1c;
+    border-radius: 5px;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+  }
+  .main-index .videos-container .videos-item {
+    flex-direction: column;
+  }
+  .main-hidraulica {
+    padding: 0.5rem;
+    padding: 0.5rem;
+  }
+  .main-hidraulica .navbar .navbar-nav {
+    flex-direction: column;
+  }
+  .main-hidraulica .navbar .navbar-nav .nav-item {
+    margin-bottom: 0.5rem;
+  }
+  .main-hidraulica .navbar .form-control {
+    margin-bottom: 0.5rem;
+  }
+  .main-hidraulica .carousel-item img {
+    animation-name: zoomInMobile;
+  }
+  .main-hidraulica .grid-container3, .main-hidraulica .grid-container4 {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    color: black;
+  }
+  .main-hidraulica .grid-container3 .grid-item2, .main-hidraulica .grid-container4 .grid-item2 {
+    padding: 0.5rem;
+  }
+  .main-hidraulica .grid-container3 .grid-item3, .main-hidraulica .grid-container4 .grid-item3 {
+    padding: 0.5rem;
+    height: 20vh;
+  }
+  .main-hidraulica .container2 {
+    margin-top: 0.5rem;
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+  .main-hidraulica .container2 .flex-container2 {
+    flex-direction: column;
+  }
+  .main-hidraulica .container2 .flex-container2 .paragraph-bubble {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    color: white;
+    border-radius: 10px;
+    margin-right: 0.5rem;
+    line-height: 1.2;
+  }
+  .main-hidraulica .container2 .flex-container2 .video-container {
+    flex-direction: column;
+  }
+  .main-hidraulica .container2 .flex-container2 .video-container .video-item {
+    width: auto;
+    border-radius: 5px;
+    border: none;
+  }
+  .main-hidraulica .container2 .flex-container2 .video-container .video-item video {
+    width: 90vw;
+    border-radius: 5px;
+    border: none;
+  }
+  .main-aire-acondicionado {
+    padding: 0.5rem;
+  }
+  .main-aire-acondicionado .navbar .navbar-nav {
+    flex-direction: column;
+  }
+  .main-aire-acondicionado .navbar .navbar-nav .nav-item {
+    margin-bottom: 0.5rem;
+  }
+  .main-aire-acondicionado .navbar .form-control {
+    margin-bottom: 0.5rem;
+  }
+  .main-aire-acondicionado .carousel-item img {
+    animation-name: zoomInMobile;
+  }
+  .main-aire-acondicionado .grid-container2 {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+  .main-aire-acondicionado .grid-container2 .grid-item, .main-aire-acondicionado .grid-container2 .grid-item2 {
+    padding: 0.5rem;
+  }
+  .main-aire-acondicionado .container2 {
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+  .main-aire-acondicionado .container2 .flex-container2 {
+    flex-direction: column;
+  }
+  .main-aire-acondicionado .container2 .flex-container2 .paragraph-bubble {
+    width: 100%;
+    padding: 0rem;
+    font-size: 1.1rem;
+    color: white;
+    border-radius: 10px;
+    margin-right: 0.5rem;
+    line-height: 1.2;
+  }
+  .main-aire-acondicionado .container2 .flex-container2 .aire-container img {
+    width: 100%;
+  }
+  .main-aire-acondicionado .container2 .flex-container2 .aire-container .video-container {
+    padding: 0%;
+    margin: 0rem 0;
+    margin: 0.5rem 0;
+  }
+  .main-aire-acondicionado .container2 .flex-container2 .aire-container .video-container .video-item video {
+    width: 100%;
+  }
+  .main-aire-acondicionado .servicios h2 {
+    font-size: 2rem;
+  }
+  .main-aire-acondicionado .grid-container1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .main-aire-acondicionado .grid-container1 .grid-item {
+    flex-direction: column;
+  }
+  .main-nosotros {
+    width: 96%;
+  }
+  .main-nosotros .burbuja-parrafo {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .main-nosotros .burbuja-parrafo .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .main-nosotros .burbuja-parrafo .content .parrafo {
+    font-size: large;
+  }
+  .main-nosotros .container3 {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .main-nosotros .bubble {
+    flex: none;
+    width: 100%;
+  }
+  .main-nosotros .carousel-item img {
+    animation-name: zoomInMobile;
+  }
+  .main-contacto .contacto {
+    flex-direction: column;
+  }
+  .main-contacto .contacto form {
+    padding-right: 0;
+    padding-bottom: 1rem;
+  }
+  .main-contacto .contacto .mapa {
+    padding-left: 0;
+  }
+  footer .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .footer-container .footer-section {
+    width: 100%;
+    text-align: center;
+  }
+}
 .top-bar {
   background-color: #1c1c1c;
   padding: 5px 0;
@@ -476,6 +865,7 @@ main {
     text-align: center;
   }
 }
+/* extend burbuja texto */
 .text-overlay, .main-index .container1 .card1 .text-bubble2, .main-index .container1 .card1 .text-bubble1 {
   position: absolute;
   top: 50%;
@@ -875,6 +1265,7 @@ main {
     text-align: center;
   }
 }
+/* extend burbuja texto */
 .text-overlay, .main-index .container1 .card1 .text-bubble2, .main-index .container1 .card1 .text-bubble1 {
   position: absolute;
   top: 50%;
@@ -2132,6 +2523,7 @@ main {
     text-align: center;
   }
 }
+/* extend burbuja texto */
 .text-overlay, .main-index .container1 .card1 .text-bubble1, .main-index .container1 .card1 .text-bubble2 {
   position: absolute;
   top: 50%;
@@ -3941,393 +4333,4 @@ footer .footer-copy p {
   text-align: center;
   border-top: 1px solid #ccc;
   padding-top: 10px;
-}
-
-@media (min-width: 768px) and (max-width: 1200px) {
-  .main-index .videos-container {
-    flex-direction: column;
-    justify-content: center;
-    background-color: #1c1c1c;
-    border-radius: 5px;
-    padding-bottom: 2rem;
-    padding-left: 1rem;
-  }
-  .main-index .videos-container .videos-item {
-    flex-direction: column;
-  }
-  .main-hidraulica .navbar .navbar-nav {
-    text-align: center;
-    width: 100%;
-  }
-  .main-hidraulica .navbar .navbar-nav .nav-item {
-    width: 100%;
-  }
-  .main-hidraulica .navbar .form-control {
-    margin-bottom: 0.5rem;
-  }
-  .main-hidraulica .navbar .search-form {
-    width: 100%;
-  }
-  .main-hidraulica .grid-container3 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-content: center;
-    color: black;
-  }
-  .main-hidraulica .grid-container3 .grid-item2 {
-    padding: 0.5rem;
-  }
-  .main-hidraulica .grid-container3 .grid-item2 .card-text {
-    font-size: large;
-  }
-  .main-hidraulica .grid-container4 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
-    color: black;
-  }
-  .main-hidraulica .grid-container4 .grid-item2 {
-    padding: 0.5rem;
-  }
-  .main-hidraulica .container2 .flex-container2 {
-    flex-direction: column;
-  }
-  .main-hidraulica .container2 .flex-container2 .paragraph-bubble {
-    background-color: #1c1c1c;
-    width: 100%;
-    padding: 1rem;
-    font-size: 1.1rem;
-    color: white;
-    border-radius: 10px;
-    margin-right: 0.5rem;
-    line-height: 1.2;
-  }
-  .main-aire-acondicionado .navbar .navbar-nav {
-    text-align: center;
-    width: 100%;
-  }
-  .main-aire-acondicionado .navbar .navbar-nav .nav-item {
-    width: 100%;
-  }
-  .main-aire-acondicionado .navbar .form-control {
-    margin-bottom: 0.5rem;
-  }
-  .main-aire-acondicionado .navbar .search-form {
-    width: 100%;
-  }
-  .main-aire-acondicionado .grid-container2 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-content: center;
-  }
-  .main-aire-acondicionado .grid-container2 .grid-item, .main-aire-acondicionado .grid-container2 .grid-item2 {
-    padding: 0.5rem;
-  }
-  .main-aire-acondicionado .grid-container2 .grid-item .card-text, .main-aire-acondicionado .grid-container2 .grid-item2 .card-text {
-    font-size: large;
-  }
-  .main-aire-acondicionado .grid-container1 {
-    background-color: #ffffff;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-  .main-aire-acondicionado .grid-container1 .grid-item {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    overflow: hidden;
-    transition: transform 1s ease;
-  }
-  .main-aire-acondicionado .grid-container1 .grid-item:hover {
-    transform: scale(1.05);
-    z-index: 1;
-  }
-  .main-aire-acondicionado .grid-container1 .grid-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  .main-aire-acondicionado .grid-container1 .grid-item:hover .card-text {
-    opacity: 1;
-  }
-  .main-aire-acondicionado .container2 {
-    align-items: center;
-    margin-top: 0.5rem;
-  }
-  .main-aire-acondicionado .container2 .flex-container2 {
-    flex-direction: column;
-  }
-  .main-aire-acondicionado .container2 .flex-container2 .paragraph-bubble {
-    width: 100%;
-    padding: 0rem;
-    font-size: 1.1rem;
-    color: white;
-    border-radius: 10px;
-    margin-right: 0.5rem;
-    line-height: 1.2;
-  }
-  .main-aire-acondicionado .container2 .flex-container2 .aire-container {
-    padding-left: 15%;
-    padding-right: 15%;
-  }
-  .main-aire-acondicionado .container2 .flex-container2 .aire-container img {
-    width: 600px;
-  }
-  .main-aire-acondicionado .container2 .flex-container2 .aire-container .video-container {
-    margin: 0rem 0;
-    margin: 0.5rem 0;
-  }
-  .main-aire-acondicionado .container2 .flex-container2 .aire-container .video-container .video-item video {
-    width: 100%;
-  }
-  .main-nosotros .burbuja-parrafo {
-    padding-left: 2%;
-    padding-right: 2%;
-  }
-  .main-nosotros .burbuja-parrafo .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .main-nosotros .burbuja-parrafo .content .parrafo {
-    font-size: large;
-  }
-  .main-nosotros .burbuja-parrafo .content .imagen-trapezoidal {
-    width: 80%;
-    height: 80%;
-  }
-}
-@media (max-width: 767px) {
-  .main-index .banner-container .banner-img {
-    animation-name: zoomInMobile;
-    -o-object-fit: none;
-       object-fit: none;
-  }
-  .main-index .banner-container .banner-img .text-overlay1 {
-    width: 80%;
-    text-align: center;
-    transform: translate(-50%, -50%);
-  }
-  .main-index .banner-container .banner-img .text-overlay1 .quienes {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  .main-index .search-form {
-    width: 100%;
-  }
-  .main-index .container1 {
-    flex-direction: column;
-    background-color: #1c1c1c;
-  }
-  .main-index .container1 .card1, .main-index .container1 .card1.card-left, .main-index .container1 .card1.card-right {
-    width: 100%;
-    height: auto;
-  }
-  .main-index .container1 .card1.card-left, .main-index .container1 .card1.card-right {
-    transform: translateX(0);
-    -webkit-clip-path: none;
-            clip-path: none;
-  }
-  .main-index .container1 .card1 .text-bubble1, .main-index .container1 .card1 .text-bubble2 {
-    justify-content: center;
-  }
-  .main-index .servicios {
-    padding: 1rem;
-  }
-  .main-index .servicios h2 {
-    font-size: 1.2rem;
-    padding: 0.5rem;
-  }
-  .main-index .servicios p {
-    font-size: 1rem;
-    line-height: 1.4;
-  }
-  .main-index .videos-container {
-    flex-direction: column;
-    justify-content: center;
-    background-color: #1c1c1c;
-    border-radius: 5px;
-    padding-bottom: 2rem;
-    padding-left: 1rem;
-  }
-  .main-index .videos-container .videos-item {
-    flex-direction: column;
-  }
-  .main-hidraulica {
-    padding: 0.5rem;
-    padding: 0.5rem;
-  }
-  .main-hidraulica .navbar .navbar-nav {
-    flex-direction: column;
-  }
-  .main-hidraulica .navbar .navbar-nav .nav-item {
-    margin-bottom: 0.5rem;
-  }
-  .main-hidraulica .navbar .form-control {
-    margin-bottom: 0.5rem;
-  }
-  .main-hidraulica .carousel-item img {
-    animation-name: zoomInMobile;
-  }
-  .main-hidraulica .grid-container3, .main-hidraulica .grid-container4 {
-    grid-template-columns: 1fr;
-    justify-content: center;
-    color: black;
-  }
-  .main-hidraulica .grid-container3 .grid-item2, .main-hidraulica .grid-container4 .grid-item2 {
-    padding: 0.5rem;
-  }
-  .main-hidraulica .grid-container3 .grid-item3, .main-hidraulica .grid-container4 .grid-item3 {
-    padding: 0.5rem;
-    height: 20vh;
-  }
-  .main-hidraulica .container2 {
-    margin-top: 0.5rem;
-    padding-left: 0%;
-    padding-right: 0%;
-  }
-  .main-hidraulica .container2 .flex-container2 {
-    flex-direction: column;
-  }
-  .main-hidraulica .container2 .flex-container2 .paragraph-bubble {
-    width: 100%;
-    padding: 1rem;
-    font-size: 1.1rem;
-    color: white;
-    border-radius: 10px;
-    margin-right: 0.5rem;
-    line-height: 1.2;
-  }
-  .main-hidraulica .container2 .flex-container2 .video-container {
-    flex-direction: column;
-  }
-  .main-hidraulica .container2 .flex-container2 .video-container .video-item {
-    width: auto;
-    border-radius: 5px;
-    border: none;
-  }
-  .main-hidraulica .container2 .flex-container2 .video-container .video-item video {
-    width: 90vw;
-    border-radius: 5px;
-    border: none;
-  }
-  .main-aire-acondicionado {
-    padding: 0.5rem;
-  }
-  .main-aire-acondicionado .navbar .navbar-nav {
-    flex-direction: column;
-  }
-  .main-aire-acondicionado .navbar .navbar-nav .nav-item {
-    margin-bottom: 0.5rem;
-  }
-  .main-aire-acondicionado .navbar .form-control {
-    margin-bottom: 0.5rem;
-  }
-  .main-aire-acondicionado .carousel-item img {
-    animation-name: zoomInMobile;
-  }
-  .main-aire-acondicionado .grid-container2 {
-    grid-template-columns: 1fr;
-    justify-content: center;
-  }
-  .main-aire-acondicionado .grid-container2 .grid-item, .main-aire-acondicionado .grid-container2 .grid-item2 {
-    padding: 0.5rem;
-  }
-  .main-aire-acondicionado .container2 {
-    align-items: center;
-    margin-top: 0.5rem;
-  }
-  .main-aire-acondicionado .container2 .flex-container2 {
-    flex-direction: column;
-  }
-  .main-aire-acondicionado .container2 .flex-container2 .paragraph-bubble {
-    width: 100%;
-    padding: 0rem;
-    font-size: 1.1rem;
-    color: white;
-    border-radius: 10px;
-    margin-right: 0.5rem;
-    line-height: 1.2;
-  }
-  .main-aire-acondicionado .container2 .flex-container2 .aire-container img {
-    width: 100%;
-  }
-  .main-aire-acondicionado .container2 .flex-container2 .aire-container .video-container {
-    padding: 0%;
-    margin: 0rem 0;
-    margin: 0.5rem 0;
-  }
-  .main-aire-acondicionado .container2 .flex-container2 .aire-container .video-container .video-item video {
-    width: 100%;
-  }
-  .main-aire-acondicionado .servicios h2 {
-    font-size: 2rem;
-  }
-  .main-aire-acondicionado .grid-container1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .main-aire-acondicionado .grid-container1 .grid-item {
-    flex-direction: column;
-  }
-  .main-nosotros {
-    width: 96%;
-  }
-  .main-nosotros .burbuja-parrafo {
-    padding-left: 2%;
-    padding-right: 2%;
-  }
-  .main-nosotros .burbuja-parrafo .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .main-nosotros .burbuja-parrafo .content .parrafo {
-    font-size: large;
-  }
-  .main-nosotros .container3 {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .main-nosotros .bubble {
-    flex: none;
-    width: 100%;
-  }
-  .main-nosotros .carousel-item img {
-    animation-name: zoomInMobile;
-  }
-  .main-contacto .contacto {
-    flex-direction: column;
-  }
-  .main-contacto .contacto form {
-    padding-right: 0;
-    padding-bottom: 1rem;
-  }
-  .main-contacto .contacto .mapa {
-    padding-left: 0;
-  }
-  footer .footer-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  footer .footer-container .footer-section {
-    width: 100%;
-    text-align: center;
-  }
 }/*# sourceMappingURL=main.css.map */

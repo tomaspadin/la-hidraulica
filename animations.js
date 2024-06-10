@@ -1,6 +1,6 @@
+// funcionalidad animación cards index
 document.addEventListener('DOMContentLoaded', function() {
     const cards = document.querySelectorAll('.container1 .card1');
-
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -8,9 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }, {
-        threshold: 0.5 // Adjust as necessary
+        threshold: 0.5
     });
-
     cards.forEach(card => {
         observer.observe(card);
     });

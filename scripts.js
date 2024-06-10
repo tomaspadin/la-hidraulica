@@ -2,15 +2,11 @@
 // Funcionalidad logo de whatsapp, linkeado a mi número
 function redirectToWhatsApp() {
     var phoneNumber = "543492638459"; 
-    // Verificación
     var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    // URL base para WhatsApp
     var baseUrl = "https://wa.me/" + phoneNumber;
     if (isMobile) {
-        // Si es un dispositivo móvil, redirige a la aplicación de WhatsApp
         window.location.href = baseUrl;
     } else {
-        // Si es una computadora, redirige a WhatsApp Web
         window.open(baseUrl, "_blank");
     }
 }

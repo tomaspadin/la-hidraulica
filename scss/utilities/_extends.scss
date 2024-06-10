@@ -1,6 +1,7 @@
 @import "./mixins";
 @import "./variables";
 
+/* extend burbuja texto */
 .text-overlay {
     position: absolute;
     top: 50%;
@@ -11,6 +12,7 @@
     padding: 1rem;
     border-radius: 0.5rem;
 }
+
 
 %btn {
     padding: 0.5rem 1rem;

@@ -1,37 +1,10 @@
+// mixin mediaqueries
 @mixin respond-to($device) {
     @if map-has-key($breakpoints, $device) {
         @media (max-width: map-get($breakpoints, $device)) {
             @content;
         }
     }
-}
-
-@mixin flex ($flex-direction, $justify-content, $align-items){
-    display: flex;
-    flex-direction: $flex-direction;
-    justify-content: $justify-content;
-    align-items: $align-items;
-}
-
-@mixin gradient-bg($color1, $color2) {
-    background: linear-gradient(to right, $color1, $color2);
-}
-
-@mixin transition($property: all, $duration: 0.3s, $timing: ease-in-out) {
-    transition: $property $duration $timing;
-}
-
-@mixin box-shadow($x: 0, $y: 0, $blur: 10px, $color: rgba(0, 0, 0, 0.5)) {
-    box-shadow: $x $y $blur $color;
-}
-
-@mixin border-radius($radius) {
-    border-radius: $radius;
-}
-
-@mixin font-setup($weight: normal, $line-height: 1.5) {
-    font-weight: $weight;
-    line-height: $line-height;
 }
 
 @mixin media-query($breakpoint) {
@@ -45,3 +18,31 @@
         }
     }
 }
+// mixin para flex
+@mixin flex ($flex-direction, $justify-content, $align-items){
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+
+// Mixin transition
+@mixin transition($property: all, $duration: 0.3s, $timing: ease-in-out) {
+    transition: $property $duration $timing;
+}
+// Mixin estilos
+@mixin box-shadow($x: 0, $y: 0, $blur: 10px, $color: rgba(0, 0, 0, 0.5)) {
+    box-shadow: $x $y $blur $color;
+}
+
+@mixin border-radius($radius) {
+    border-radius: $radius;
+}
+
+@mixin font-setup($weight: normal, $line-height: 1.5) {
+    font-weight: $weight;
+    line-height: $line-height;
+}
+
+
