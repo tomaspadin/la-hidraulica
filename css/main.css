@@ -3830,6 +3830,18 @@ body {
   z-index: 9999;
 }
 
+@media only screen and (max-width: 767px) {
+  .whatsapp-btn {
+    width: 50px;
+    height: 50px;
+    bottom: calc(50vh - 25px);
+    right: 5px;
+  }
+  .whatsapp-logo {
+    width: 55px;
+    height: 55px;
+  }
+}
 .carousel-container1 {
   width: 100%;
   overflow: hidden;
