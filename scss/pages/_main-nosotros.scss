@@ -29,6 +29,9 @@ body {
       align-items: center;
       justify-content: space-between;
       .parrafo {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid #ccc;
         text-align: justify;
         flex: 1;
         line-height: 2;

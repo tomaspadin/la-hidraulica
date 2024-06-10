@@ -1,24 +1,23 @@
-function togglePopup() {
-    const popup = document.getElementById('whatsappPopup');
-    if (popup.style.display === 'none' || popup.style.display === '') {
-        popup.style.display = 'block';
+
+// Funcionalidad logo de whatsapp, linkeado a mi número
+function redirectToWhatsApp() {
+    var phoneNumber = "543492638459"; 
+    // Verificación
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    // URL base para WhatsApp
+    var baseUrl = "https://wa.me/" + phoneNumber;
+    if (isMobile) {
+        // Si es un dispositivo móvil, redirige a la aplicación de WhatsApp
+        window.location.href = baseUrl;
     } else {
-        popup.style.display = 'none';
+        // Si es una computadora, redirige a WhatsApp Web
+        window.open(baseUrl, "_blank");
     }
 }
-
-window.addEventListener('click', function(event) {
-    const popup = document.getElementById('whatsappPopup');
-    const button = document.getElementById('whatsappBtn');
-    if (!popup.contains(event.target) && event.target !== button) {
-        popup.style.display = 'none';
-    }
-});
-
+// Funcionalidad carrucel en index, hidraulica y aire acondicionado
 document.addEventListener('DOMContentLoaded', function() {
     const carousel = document.querySelector('.carousel1');
     const clones = carousel.innerHTML;
-
     carousel.innerHTML += clones; 
     const numImages = carousel.children.length / 2; 
     const animationDuration = numImages * 10; 
